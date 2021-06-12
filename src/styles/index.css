@@ -1,0 +1,12 @@
+.resume-btn {
+  background-color: transparent;
+  border: 1px solid var(--c-accent);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all ease-in-out 0.15s;
+}
+
+.resume-btn:hover {
+  color: var(--c-text-light);
+  background-color: var(--c-accent);
+}
