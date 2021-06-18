@@ -1,12 +1,11 @@
 header {
-  background: rebeccapurple;
+  background: var(--c-bg-elevated);
   margin-bottom: 1.45rem;
 }
 
 .navbar-wrapper {
   margin: 0 auto;
-  max-width: 960;
-  padding: 1.45rem 1.0875rem;
+  padding: 15px 30px;
 }
 
 .navbar-title {
@@ -14,6 +13,6 @@ header {
 }
 
 .navbar-home-link {
-  color: white;
+  color: var(--c-blue);
   text-decoration: none;
 }
