@@ -1,15 +1,31 @@
 :root {
   --font-sans-serif: Verdana, Helvetica Neue, Arial, Courier, sans-serif;
   --font-serif: Palatino, American Typewriter, serif;
-  --font-monospace: Courier, monospace;
+  --font-monospace: Lucida Console Consolas, Andale Mono, Courier, monospace;
 
-  --c-text-dark: hsla(0, 0%, 0%, 0.8);
-  --c-text-light: hsla(0, 0%, 100%, 1);
-  --c-text-link: hsla(0, 0%, 50%, 1);
-  --c-text-muted: hsla(0, 0%, 50%, 1);
-  --c-text-accent: hsla(208, 70%, 49%, 1);
-
-  --c-accent: hsla(208, 70%, 49%, 1);
+  --c-bg: hsl(220, 16%, 22%);
+  --c-bg-elevated: hsl(222, 16%, 28%);
+  --c-cursor: hsl(219, 28%, 88%);
+  --c-text: hsl(219, 28%, 88%);
+  --c-text-bold: hsl(219, 28%, 88%);
+  --c-text-mute: hsl(219, 28%, 68%);
+  --c-selected: hsl(193, 43%, 67%);
+  --c-black: hsl(222, 16%, 28%);
+  --c-red: hsl(354, 42%, 56%);
+  --c-green: hsl(92, 28%, 65%);
+  --c-yellow: hsl(40, 71%, 73%);
+  --c-blue: hsl(210, 34%, 63%);
+  --c-magenta: hsl(311, 20%, 63%);
+  --c-cyan: hsl(193, 43%, 67%);
+  --c-white: hsl(218, 27%, 92%);
+  --c-bright-black: hsl(220, 16%, 36%);
+  --c-bright-red: hsl(354, 42%, 56%);
+  --c-bright-green: hsl(92, 28%, 65%);
+  --c-bright-yello: hsl(40, 71%, 73%);
+  --c-bright-blue: hsl(210, 34%, 63%);
+  --c-bright-magenta: hsl(311, 20%, 63%);
+  --c-bright-cyan: hsl(179, 25%, 65%);
+  --c-bright-white: hsl(218, 27%, 94%);
 
   --c-shadow-light: hsla(0, 0%, 0%, 0.05)
 }
@@ -22,10 +38,9 @@ html {
   box-sizing: border-box;
   overflow-y: scroll;
 }
+
 body {
-  margin: 0;
-  padding: 0;
-  color: var(--c-text-dark);
+  color: var(--c-text);
   font-family: var(--font-sans-serif);
   font-weight: normal;
   font-kerning: normal;
@@ -36,6 +51,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   word-wrap: break-word;
+  background-color: var(--c-bg);
+  margin: 0;
+  padding: 90px 0;
 }
 
 /* Fonts */
@@ -46,7 +64,7 @@ h1, h2, h3, h4, h5, h6, p, pre, code, a, span, label {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--heading-font);
+  font-family: var(--font-monospace);
   font-weight: bold;
   text-rendering: optimizeLegibility;
 }
@@ -85,14 +103,12 @@ p {
 a {
   font-size: 1rem;
   line-height: 1rem;
-  color: var(--c-text-link);
   text-decoration: none;
-
 }
 
 code {
   font-family: var(--font-monospace);
-  background-color: hsla(0, 0%, 0%, 0.04);
+  background-color: var(--c-bg-elevated);
   border-radius: 3px;
 }
 
