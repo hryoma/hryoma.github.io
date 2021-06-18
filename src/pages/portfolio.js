@@ -3,31 +3,31 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import ProjectCard from "../components/project-card"
 
 import "../styles/portfolio.css"
+
 
 const PortfolioPage = ({ data }) => {
   return (
     <Layout>
       <Seo title="Some notes and articles" />
       <h1>Portfolio</h1>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div className="project">
-          <div className="image">Image</div>
-          <div className="content">
-            <h2>{node.frontmatter.title}</h2>
-            <div className="desc">{node.frontmatter.desc}</div>
-            <div className="tags">
-              {node.frontmatter.tags.map( ( tag ) => (
-                <span className="tag">{tag}</span>
-              ))}
-            </div>
-            <div className="read-more">
-              <Link to={node.fields.slug}>Read More</Link>
-            </div>
-          </div>
-        </div>
-      ))}
+      <div class="grid-layout">
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <ProjectCard image={node.frontmatter.cover_image}
+                       title={node.frontmatter.title}
+                        role={node.frontmatter.role}
+                   startDate={node.frontmatter.start_date}
+                     endDate={node.frontmatter.end_date}
+                        desc={node.frontmatter.desc}
+                  githubLink={node.frontmatter.github_link}
+                externalLink={node.frontmatter.external_link}
+                        tags={node.frontmatter.tags}
+                  visibility={node.frontmatter.visibility}
+                        slug={node.fields.slug} />
+        ))}
+      </div>
     </Layout>
   )
 }
@@ -36,17 +36,23 @@ export const query = graphql`
   {
     allMarkdownRemark(
       sort: { fields: frontmatter___start_date, order: DESC }
-      filter: { fileAbsolutePath: { regex: "/projects/.+md$/" } }
+      filter: { fileAbsolutePath: { regex: "/projects/.+md$/" },
+                frontmatter: { visibility: {ne: "none"} }
+      }
     ) {
       edges {
         node {
           frontmatter {
-            title
             cover_image
+            title
+            role
+            start_date(formatString: "MMM YYYY")
+            end_date(formatString: "MMM YYYY")
             desc
-            start_date
-            end_date
+            github_link
+            external_link
             tags
+            visibility
           }
           fields {
             slug

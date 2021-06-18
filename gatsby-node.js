@@ -29,16 +29,22 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(
+        filter: { frontmatter: { visibility: {eq: "post"} } }
+      ) {
         edges {
           node {
             frontmatter {
-              title
               cover_image
-              desc
+              title
+              role
               start_date
               end_date
+              desc
+              github_link
+              external_link
               tags
+              visibility
             }
             fields {
               slug

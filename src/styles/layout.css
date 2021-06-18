@@ -1,15 +1,17 @@
 :root {
-  --font-sans-serif: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  --font-serif: serif;
-  --font-monospace: "SFMono-Regular", Consolas, "Roboto Mono",
-    "Liberation Mono", Menlo, Courier, monospace;
+  --font-sans-serif: Verdana, Helvetica Neue, Arial, Courier, sans-serif;
+  --font-serif: Palatino, American Typewriter, serif;
+  --font-monospace: Courier, monospace;
 
   --c-text-dark: hsla(0, 0%, 0%, 0.8);
   --c-text-light: hsla(0, 0%, 100%, 1);
-  --c-text-link: hsla(0, 0, 50%, 1);
+  --c-text-link: hsla(0, 0%, 50%, 1);
+  --c-text-muted: hsla(0, 0%, 50%, 1);
+  --c-text-accent: hsla(208, 70%, 49%, 1);
 
   --c-accent: hsla(208, 70%, 49%, 1);
+
+  --c-shadow-light: hsla(0, 0%, 0%, 0.05)
 }
 
 /* General */
