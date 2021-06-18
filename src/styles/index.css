@@ -1,12 +1,72 @@
+.home-title::before {
+  content: '> ';
+}
+
+.typewriter-text {
+  font-family: var(--font-monospace);
+  position: relative;
+  width: max-content;
+  --typewriter-speed: 2s;
+}
+
+.typewriter-text::before,
+.typewriter-text::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.typewriter-text::before {
+  background: var(--c-bg);
+  animation: typewriter var(--typewriter-speed) steps(12) 1s forwards;
+}
+
+.typewriter-text::after {
+  width: .125em;
+  background: var(--c-cursor);
+  animation: typewriter var(--typewriter-speed) steps(12) 1s forwards,
+             typeblink 600ms steps(12) infinite;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%
+  }
+}
+
+@keyframes typeblink {
+  to {
+    background-color: transparent;
+  }
+}
+
 .resume-btn {
+  color: var(--c-blue);
   background-color: transparent;
   border: 1px solid var(--c-blue);
-  border-radius: 3px;
+  border-radius: 5px;
+  text-align: center;
+  display: block;
+  width: 90px;
+  padding: 10px 5px;
   cursor: pointer;
   transition: all ease-in-out 0.15s;
+  opacity: 0;
+  transform: translateY(1rem);
+  animation: fadeInUp 2s ease 4s forwards;
 }
 
 .resume-btn:hover {
-  color: var(--c-text-light);
-  background-color: var(--c-accent);
+  color: var(--c-black);
+  background-color: var(--c-blue);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

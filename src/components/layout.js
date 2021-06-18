@@ -9,17 +9,15 @@ import * as React from "react"
 import PropTypes from "prop-types"
 
 import Header from "./header"
-import Footer from "./footer"
 import "../styles/layout.css"
 
 const Layout = ({ children }) => {
   return (
     <>
-      <Header navBrand={`Ryoma`} />
+      <Header />
       <div className="container" >
         <main>{children}</main>
       </div>
-      <Footer />
     </>
   )
 }

@@ -1,18 +1,65 @@
-header {
-  background: var(--c-bg-elevated);
-  margin-bottom: 1.45rem;
+#navbar {
+  background-color: var(--c-bg-elevated);
+  height: 90px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
 }
 
-.navbar-wrapper {
-  margin: 0 auto;
-  padding: 15px 30px;
+#navbar * {
+  font-size: 1.2rem;
 }
 
-.navbar-title {
-  margin: 0;
+.nav-wrapper {
+  font-family: var(--font-monospace);
+  height: 100%;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.navbar-home-link {
-  color: var(--c-blue);
+.nav-left {
+  display: flex;
+}
+
+.nav-brand {
+  color: var(--c-green);
+  font-weight: bold;
   text-decoration: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.brand-plain {
+  color: var(--c-white);
+}
+
+.nav-menu {
+  margin-left: 15px;
+}
+
+.nav-link {
+  color: var(--c-blue);
+}
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-right > * {
+  margin-left: 15px;
+}
+
+.nav-icon {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+.nav-icon:hover {
+  filter: drop-shadow(0 0 2px var(--c-blue));
 }
