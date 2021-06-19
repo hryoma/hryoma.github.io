@@ -5,7 +5,7 @@ module.exports = {
     author: `@hryoma`,
     keywords: `computer science, software developer, web development, frontend, backend, cybersecurity`,
     siteUrl: `https://ryoma.dev`,
-    image: `images/site-icon.png`,
+    image: `assets/icons/icon-site.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -25,14 +25,6 @@ module.exports = {
         ignore: [`**/\.*`]
       },
     },
-    `gatsby-plugin-image`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -44,7 +36,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/icons/icon-site.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-gatsby-cloud`,
