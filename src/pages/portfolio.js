@@ -11,22 +11,26 @@ import "../styles/portfolio.css"
 const PortfolioPage = ({ data }) => {
   return (
     <Layout>
-      <Seo title="Some notes and articles" />
-      <h1>Portfolio</h1>
-      <div class="grid-layout">
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <ProjectCard image={node.frontmatter.cover_image}
-                       title={node.frontmatter.title}
-                        role={node.frontmatter.role}
-                   startDate={node.frontmatter.start_date}
-                     endDate={node.frontmatter.end_date}
-                        desc={node.frontmatter.desc}
-                  githubLink={node.frontmatter.github_link}
-                externalLink={node.frontmatter.external_link}
-                        tags={node.frontmatter.tags}
-                  visibility={node.frontmatter.visibility}
-                        slug={node.fields.slug} />
-        ))}
+      <Seo title="Portfolio" />
+      <div className="container">
+        <h1>Portfolio</h1>
+        <div class="grid-layout">
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+            <div className="card-wrapper">
+            <ProjectCard image={node.frontmatter.cover_image}
+                         title={node.frontmatter.title}
+                          role={node.frontmatter.role}
+                     startDate={node.frontmatter.start_date}
+                       endDate={node.frontmatter.end_date}
+                          desc={node.frontmatter.desc}
+                    githubLink={node.frontmatter.github_link}
+                  externalLink={node.frontmatter.external_link}
+                          tags={node.frontmatter.tags}
+                    visibility={node.frontmatter.visibility}
+                          slug={node.fields.slug} />
+            </div>
+          ))}
+        </div>
       </div>
     </Layout>
   )

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Ryoma Harris | Portfolio`,
+    title: `Ryoma Harris`,
     description: `Hi, I'm Ryoma, a computer science major at UPenn.`,
     author: `@hryoma`,
     keywords: `computer science, software developer, web development, frontend, backend, cybersecurity`,
@@ -30,8 +30,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ryoma Harris | Portfolio`,
-        short_name: `Ryoma | Portfolio`,
+        name: `Ryoma Harris`,
+        short_name: `Ryoma`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

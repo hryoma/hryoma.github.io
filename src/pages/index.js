@@ -59,7 +59,9 @@ const IndexPage = () => {
               </p>
             </div>
           </div>
-          <Header/>
+          <div className="header-wrapper">
+            <Header/>
+          </div>
         </div>
       </div>
     </>

@@ -43,6 +43,7 @@
 
 .terminal-title {
   margin-bottom: 2.4rem;
+  font-size: 1.15rem;
 }
 
 .typewriter-text {
@@ -158,6 +159,7 @@
 
 .fade-in-up > p {
   margin-bottom: 1.2rem;
+  font-size: 1.15rem;
 }
 
 @keyframes fadeInUp {
@@ -165,4 +167,10 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.header-wrapper > * {
+  position: absolute !important;
+  top: auto !important;
+  bottom: 0;
 }

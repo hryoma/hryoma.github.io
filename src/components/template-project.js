@@ -9,9 +9,12 @@ export default function TemplateProject({ data }) {
   return (
     <Layout className="template-project project-node">
       <Seo title={project.frontmatter.title} />
-      <div dangerouslySetInnerHTML={{ __html: project.html }} />
-      <div className="back-link" style={{ marginTop: "2rem" }}>
-        <Link to="/portfolio/">Back to Portfolio</Link>
+      <div className="container">
+        <h1>{project.frontmatter.title}</h1>
+        <div className="markdown" dangerouslySetInnerHTML={{ __html: project.html }} />
+        <div className="back-link" style={{ marginTop: "2rem" }}>
+          <Link to="/portfolio/">Back to Portfolio</Link>
+        </div>
       </div>
     </Layout>
   )
