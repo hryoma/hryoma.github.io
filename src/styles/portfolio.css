@@ -1,17 +1,10 @@
 .grid-layout {
-  display: grid;
-  grid-gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
-@media (max-width: 850px) {
-  .grid-layout {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 850px) {
-  .grid-layout {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+.grid-layout > .card-wrapper {
+  margin: 15px;
+  flex: 0 0 400px;
 }

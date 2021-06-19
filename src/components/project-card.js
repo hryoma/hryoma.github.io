@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 
 import "../styles/project-card.css"
 
-import githubIcon from "../assets/icons/github.png"
-import linkIcon from "../assets/icons/link.png"
+import githubIcon from "../assets/icons/icon-github.png"
+import linkIcon from "../assets/icons/icon-link.png"
 
 const ProjectCard = ({ image, title, role, startDate, endDate, desc, githubLink,
                        externalLink, tags, visibility, slug }) => {

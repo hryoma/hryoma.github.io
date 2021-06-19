@@ -1,8 +1,8 @@
 #navbar {
   background-color: var(--c-bg-elevated);
   height: 90px;
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 99;
