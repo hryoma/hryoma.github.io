@@ -13,11 +13,15 @@ const Header = () => (
       <div className="nav-left">
           <div>
             <Link className="nav-brand" to="/">
-              ryoma<span className="brandPlain">:</span>~<span className="brand-plain">$</span>
+              <span className="text-green">ryoma</span>
+              <span className="text-white">:</span>
+              <span className="text-magenta">~</span>
+              <span className="text-white">$</span>
             </Link>
           </div>
           <div className="nav-menu">
-            <Link className="nav-link" to="/portfolio/">portfolio</Link>
+            <p>ls</p>
+            <Link className="nav-link" to="/portfolio/">portfolio/</Link>
           </div>
       </div>
       <div className="nav-right">

@@ -1,12 +1,55 @@
-.home-title::before {
-  content: '> ';
+.wrapper {
+  background-color: var(--c-bg-deeper);
+  padding: 30px;
+    align-content: center;
+}
+
+.terminal-header {
+  font-size: 2rem;
+  font-family: Menlo, Monaco, "Lucida Console", "Courier New", Courier, monospace;
+  text-align: center;
+  background: var(--c-bg-elevated);
+  width: 100%;
+  padding: 10px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.terminal-window {
+  font-family: var(--font-monospace);
+  max-width: 800px;
+  max-height: 400px;
+  border: 3px solid var(--c-bg-elevated);
+  border-radius: 15px;
+  background-color: var(--c-bg);
+  padding: 60px 0 120px 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  overflow: hidden;
+}
+
+.terminal-content {
+  padding: 30px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.terminal-title {
+  margin-bottom: 2.4rem;
 }
 
 .typewriter-text {
-  font-family: var(--font-monospace);
+  color: var(--c-yellow);
   position: relative;
   width: max-content;
-  --typewriter-speed: 2s;
+  --typewriter-speed: 3s;
 }
 
 .typewriter-text::before,
@@ -26,9 +69,9 @@
 
 .typewriter-text::after {
   width: .125em;
-  background: var(--c-cursor);
+  background: transparent;
   animation: typewriter var(--typewriter-speed) steps(12) 1s forwards,
-             typeblink 600ms steps(12) infinite;
+             typeblink 750ms steps(12) 6;
 }
 
 @keyframes typewriter {
@@ -39,29 +82,82 @@
 
 @keyframes typeblink {
   to {
-    background-color: transparent;
+    background-color: var(--c-cursor);
   }
 }
 
-.resume-btn {
+.link {
+  color: var(--c-white);
+}
+
+.link.text-blue,
+.link.text-cyan,
+.link.text-green,
+.link.text-magenta,
+.link.text-red,
+.link.text-white,
+.link.text-yellow {
+  border-bottom: 2px solid;
+  transition: 0.15s ease-in-out;
+}
+
+.link.text-blue {
+  border-color: var(--c-blue);
+}
+.link.text-blue:hover {
   color: var(--c-blue);
-  background-color: transparent;
-  border: 1px solid var(--c-blue);
-  border-radius: 5px;
-  text-align: center;
-  display: block;
-  width: 90px;
-  padding: 10px 5px;
-  cursor: pointer;
-  transition: all ease-in-out 0.15s;
+}
+
+.link.text-cyan {
+  border-color: var(--c-cyan);
+}
+.link.text-cyan:hover {
+  color: var(--c-cyan);
+}
+
+.link.text-green {
+  border-color: var(--c-green);
+}
+.link.text-green:hover {
+  color: var(--c-green);
+}
+
+.link.text-magenta {
+  border-color: var(--c-magenta);
+}
+.link.text-magenta:hover {
+  color: var(--c-magenta);
+}
+
+.link.text-red {
+  border-color: var(--c-red);
+}
+.link.text-red:hover {
+  color: var(--c-red);
+}
+
+.link.text-white {
+  border-color: var(--c-white);
+}
+.link.text-white:hover {
+  color: var(--c-white);
+}
+
+.link.text-yellow {
+  border-color: var(--c-yellow);
+}
+.link.text-yellow:hover {
+  color: var(--c-yellow);
+}
+
+.fade-in-up {
   opacity: 0;
   transform: translateY(1rem);
   animation: fadeInUp 2s ease 4s forwards;
 }
 
-.resume-btn:hover {
-  color: var(--c-black);
-  background-color: var(--c-blue);
+.fade-in-up > p {
+  margin-bottom: 1.2rem;
 }
 
 @keyframes fadeInUp {

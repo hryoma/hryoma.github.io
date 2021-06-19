@@ -3,6 +3,7 @@
   --font-serif: Palatino, American Typewriter, serif;
   --font-monospace: Lucida Console Consolas, Andale Mono, Courier, monospace;
 
+  --c-bg-deeper: hsl(218, 16%, 16%);
   --c-bg: hsl(220, 16%, 22%);
   --c-bg-elevated: hsl(222, 16%, 28%);
   --c-cursor: hsl(219, 28%, 88%);
@@ -21,7 +22,7 @@
   --c-bright-black: hsl(220, 16%, 36%);
   --c-bright-red: hsl(354, 42%, 56%);
   --c-bright-green: hsl(92, 28%, 65%);
-  --c-bright-yello: hsl(40, 71%, 73%);
+  --c-bright-yellow: hsl(40, 71%, 73%);
   --c-bright-blue: hsl(210, 34%, 63%);
   --c-bright-magenta: hsl(311, 20%, 63%);
   --c-bright-cyan: hsl(179, 25%, 65%);
@@ -51,9 +52,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   word-wrap: break-word;
-  background-color: var(--c-bg);
+  background-color: var(--c-bg-deeper);
   margin: 0;
-  padding: 90px 0;
+  padding: 0;
 }
 
 /* Fonts */
@@ -96,13 +97,13 @@ h6 {
 }
 
 p {
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: 1.15rem;
+  line-height: 1.5rem;
 }
 
 a {
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: 1.15rem;
+  line-height: 1.5rem;
   text-decoration: none;
 }
 
@@ -112,9 +113,32 @@ code {
   border-radius: 3px;
 }
 
+.text-blue {
+  color: var(--c-blue);
+}
+.text-cyan {
+  color: var(--c-cyan);
+}
+.text-green {
+  color: var(--c-green);
+}
+.text-magenta {
+  color: var(--c-magenta);
+}
+.text-red {
+  color: var(--c-red);
+}
+.text-white {
+  color: var(--c-white);
+}
+.text-yellow {
+  color: var(--c-yellow);
+}
+
 /* divs */
 
 .container {
+  background-color: var(--c-bg);
   margin: 0 auto;
   max-width: 960px;
 }

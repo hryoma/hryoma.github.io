@@ -1,7 +1,7 @@
 #navbar {
   background-color: var(--c-bg-elevated);
   height: 90px;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
@@ -23,11 +23,11 @@
 
 .nav-left {
   display: flex;
+  font-weight: bold;
 }
 
 .nav-brand {
   color: var(--c-green);
-  font-weight: bold;
   text-decoration: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -45,7 +45,7 @@
 }
 
 .nav-link {
-  color: var(--c-blue);
+  color: var(--c-bright-blue);
 }
 .nav-link:hover {
   text-decoration: underline;
