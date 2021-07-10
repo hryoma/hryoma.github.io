@@ -43,7 +43,7 @@ Porttitor eget dolor morbi non. Diam maecenas ultricies mi eget mauris pharetra.
 
 #### Code Block
 
-```java
+```java{numberLines: true}
 public static void main(String[] args) {
     System.out.println("Hello World");
 }

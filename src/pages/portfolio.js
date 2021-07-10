@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -12,9 +12,9 @@ const PortfolioPage = ({ data }) => {
   return (
     <Layout>
       <Seo title="Portfolio" />
-      <div className="container">
+      <div className="container-wide">
         <h1>Portfolio</h1>
-        <div class="grid-layout">
+        <div className="grid-layout">
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <div className="card-wrapper">
             <ProjectCard image={node.frontmatter.cover_image}
