@@ -2,6 +2,7 @@ import { graphql, Link } from "gatsby"
 import React from "react"
 import Seo from "./seo"
 import Layout from "./layout"
+import "../styles/markdown.css"
 
 export default function TemplateProject({ data }) {
   const project = data.markdownRemark

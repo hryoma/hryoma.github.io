@@ -23,7 +23,6 @@
 
 .nav-left {
   display: flex;
-  font-weight: bold;
 }
 
 .nav-brand {
@@ -34,6 +33,9 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.nav-brand:hover {
+  text-decoration: none;
 }
 
 .brand-plain {

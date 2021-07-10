@@ -1,16 +1,26 @@
 :root {
-  --font-sans-serif: Verdana, Helvetica Neue, Arial, Courier, sans-serif;
+  --font-sans-serif: 'Avenir', Verdana, Helvetica Neue, Arial, Courier, sans-serif;
   --font-serif: Palatino, American Typewriter, serif;
-  --font-monospace: Lucida Console Consolas, Andale Mono, Courier, monospace;
+  --font-monospace: SourceCodePro, Palatino, Lucida Console, Consolas, Andale Mono, Courier, monospace;
 
   --c-bg-deeper: hsl(218, 16%, 16%);
   --c-bg: hsl(220, 16%, 22%);
   --c-bg-elevated: hsl(222, 16%, 28%);
-  --c-cursor: hsl(219, 28%, 88%);
-  --c-text: hsl(219, 28%, 88%);
-  --c-text-bold: hsl(219, 28%, 88%);
+  --c-cursor: hsl(219, 28%, 80%);
+  --c-text: hsl(219, 28%, 80%);
+  --c-text-bold: hsl(219, 28%, 80%);
   --c-text-mute: hsl(219, 18%, 68%);
   --c-selected: hsl(193, 43%, 67%);
+
+  --c-dark-black: hsl(222, 16%, 0%);
+  --c-dark-red: hsl(354, 42%, 16%);
+  --c-dark-green: hsl(92, 28%, 25%);
+  --c-dark-yellow: hsl(40, 71%, 33%);
+  --c-dark-blue: hsl(210, 34%, 23%);
+  --c-dark-magenta: hsl(311, 20%, 23%);
+  --c-dark-cyan: hsl(193, 43%, 27%);
+  --c-dark-white: hsl(218, 27%, 52%);
+
   --c-black: hsl(222, 16%, 28%);
   --c-red: hsl(354, 42%, 56%);
   --c-green: hsl(92, 28%, 65%);
@@ -19,6 +29,7 @@
   --c-magenta: hsl(311, 20%, 63%);
   --c-cyan: hsl(193, 43%, 67%);
   --c-white: hsl(218, 27%, 92%);
+
   --c-bright-black: hsl(220, 16%, 36%);
   --c-bright-red: hsl(354, 42%, 56%);
   --c-bright-green: hsl(92, 28%, 65%);
@@ -29,6 +40,13 @@
   --c-bright-white: hsl(218, 27%, 94%);
 
   --c-shadow-light: hsla(0, 0%, 0%, 0.05)
+}
+
+@font-face {
+  font-family: "SourceCodePro";
+  src: local("SourceCodePro"),
+       url("../fonts/SourceCodePro-Regular.ttf") format("truetype");
+  font-weight: normal;
 }
 
 /* General */
@@ -114,9 +132,9 @@ h6 {
   margin-bottom: 0.8rem;
 }
 
-p {
-  font-size: 1rem;
-  line-height: 1.25rem;
+p, a {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 
 .markdown p {
@@ -124,21 +142,24 @@ p {
 }
 
 small {
-  font-size: 0.85rem;
-  line-height: 0.85rem;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
 }
 
 a {
   color: var(--c-blue);
-  font-size: 1rem;
-  line-height: 1.25rem;
   text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 code {
+  font-size: 1rem;
+  line-height: 1.3rem;
   font-family: var(--font-monospace);
   background-color: var(--c-bg-elevated);
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .text-blue {
@@ -165,8 +186,7 @@ code {
 
 /* divs */
 
-.container {
-  background-color: var(--c-bg);
+.container, .container-wide {
   padding: 2rem 1rem;
   margin: 0 auto;
   -webkit-box-sizing: border-box;
@@ -174,28 +194,32 @@ code {
   box-sizing: border-box;
 }
 
+.container-colored {
+  background-color: var(--c-bg);
+}
+
 @media (min-width: 576px) {
-  .container {
+  .container, .container-wide {
     max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
-  .container {
+  .container, .container-wide {
     padding: 2rem 3rem;
     max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
-  .container {
+  .container, .container-wide {
     max-width: 960px;
   }
 }
 
-@media (min-width: 1200px) {
-  .container {
+@media (min-width: 1500px) {
+  .container-wide {
     padding: 2rem 5rem;
-    max-width: 1140px;
+    max-width: 1440px;
   }
 }

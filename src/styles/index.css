@@ -88,16 +88,14 @@
 }
 
 .link {
-  color: var(--c-white);
+  color: var(--c-text);
+  text-decoration: none;
+}
+.link:hover, a[class*="text-"] {
+  text-decoration: none;
 }
 
-.link.text-blue,
-.link.text-cyan,
-.link.text-green,
-.link.text-magenta,
-.link.text-red,
-.link.text-white,
-.link.text-yellow {
+.link[class*="text-"] {
   border-bottom: 2px solid;
   transition: 0.15s ease-in-out;
 }
@@ -168,6 +166,8 @@
     transform: translateY(0);
   }
 }
+
+/* Override header.css styles */
 
 .header-wrapper > * {
   position: absolute !important;
