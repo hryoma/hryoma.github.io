@@ -1,10 +1,10 @@
 .grid-layout {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .grid-layout > .card-wrapper {
   margin: 15px;
-  flex: 0 0 400px;
+  flex: 0 0 320px;
 }

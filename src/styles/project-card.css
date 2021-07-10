@@ -1,9 +1,8 @@
 .card {
-  width: 100%;
-  max-width: 360px;
+  max-width: 300px;
   border-radius: 8px;
   box-shadow: 0 2px 15px 5px var(--c-shadow-light);
-  background-color: var(--c-bg-elevated);
+  background-color: var(--c-bg);
   margin: 0 auto;
   padding: 15px 15px 30px;
   transition: all ease-in-out 0.15s;
@@ -29,6 +28,10 @@
   margin-top: 15px;
 }
 
+.title {
+  margin-bottom: 5px;
+}
+
 .data {
   color: var(--c-text-mute);
   margin-top: 5px;
@@ -42,10 +45,10 @@
 
 .tag {
   font-size: 0.8rem;
-  color: var(--c-black);
+  color: var(--c-dark-blue);
   background-color: var(--c-blue);
   border-radius: 10px;
-  padding: 3px 10px;
-  margin-right: 5px;
+  padding: 1px 8px;
+  margin: 3px;
   display: inline-block;
 }
