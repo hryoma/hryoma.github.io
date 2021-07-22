@@ -76,7 +76,7 @@ body {
 }
 
 main {
-  padding-top: 90px;
+  padding-top: 120px;
 }
 
 /* Fonts */
@@ -85,6 +85,12 @@ h1, h2, h3, h4, h5, h6, p, small, pre, code, a, span, label {
   padding: 0;
   margin: 0;
   word-break: normal;
+}
+ul, li {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -132,7 +138,7 @@ h6 {
   margin-bottom: 0.8rem;
 }
 
-p, a {
+p {
   font-size: 1.2rem;
   line-height: 1.5rem;
 }
@@ -214,6 +220,12 @@ code {
 @media (min-width: 992px) {
   .container, .container-wide {
     max-width: 960px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .container-wide {
+    max-width: 1200px;
   }
 }
 
