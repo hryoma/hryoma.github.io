@@ -17,17 +17,7 @@ const PortfolioPage = ({ data }) => {
         <div className="grid-layout">
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <div className="card-wrapper">
-            <ProjectCard image={node.frontmatter.cover_image}
-                         title={node.frontmatter.title}
-                          role={node.frontmatter.role}
-                     startDate={node.frontmatter.start_date}
-                       endDate={node.frontmatter.end_date}
-                          desc={node.frontmatter.desc}
-                    githubLink={node.frontmatter.github_link}
-                  externalLink={node.frontmatter.external_link}
-                          tags={node.frontmatter.tags}
-                    visibility={node.frontmatter.visibility}
-                          slug={node.fields.slug} />
+            <ProjectCard node={node} />
             </div>
           ))}
         </div>
@@ -47,7 +37,13 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
-            cover_image
+            cover_image {
+              childImageSharp {
+                gatsbyImageData(
+                  placeholder: TRACED_SVG
+                )
+              }
+            }
             title
             role
             start_date(formatString: "MMM YYYY")
@@ -55,7 +51,10 @@ export const query = graphql`
             desc
             github_link
             external_link
-            tags
+            tags_type
+            tags_framework
+            tags_language
+            tags_tech
             visibility
           }
           fields {

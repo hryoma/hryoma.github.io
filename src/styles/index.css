@@ -1,22 +1,3 @@
-.wrapper {
-  background-color: var(--c-bg-deeper);
-  padding: 30px;
-    align-content: center;
-}
-
-.terminal-header {
-  font-size: 2rem;
-  font-family: Menlo, Monaco, "Lucida Console", "Courier New", Courier, monospace;
-  text-align: center;
-  background: var(--c-bg-elevated);
-  width: 100%;
-  padding: 10px 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
 .terminal-window {
   font-family: var(--font-monospace);
   max-width: 800px;
@@ -34,7 +15,21 @@
   overflow: hidden;
 }
 
+.terminal-header {
+  font-size: 2rem;
+  font-family: Menlo, Monaco, "Lucida Console", "Courier New", Courier, monospace;
+  text-align: center;
+  background: var(--c-bg-elevated);
+  width: 100%;
+  padding: 10px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 .terminal-content {
+  font-size: 1.15rem;
   padding: 30px;
   height: 100%;
   overflow-x: hidden;
@@ -42,15 +37,15 @@
 }
 
 .terminal-title {
+  font-family: var(--font-monospace);
   margin-bottom: 2.4rem;
-  font-size: 1.15rem;
 }
 
 .typewriter-text {
   color: var(--c-yellow);
   position: relative;
   width: max-content;
-  --typewriter-speed: 3s;
+  --typewriter-speed: 1s;
 }
 
 .typewriter-text::before,
@@ -65,13 +60,13 @@
 
 .typewriter-text::before {
   background: var(--c-bg);
-  animation: typewriter var(--typewriter-speed) steps(12) 1s forwards;
+  animation: typewriter var(--typewriter-speed) steps(12) 0.5s forwards;
 }
 
 .typewriter-text::after {
   width: .125em;
   background: transparent;
-  animation: typewriter var(--typewriter-speed) steps(12) 1s forwards,
+  animation: typewriter var(--typewriter-speed) steps(12) 0.5s forwards,
              typeblink 750ms steps(12) 6;
 }
 
@@ -87,77 +82,22 @@
   }
 }
 
-.link {
-  color: var(--c-text);
-  text-decoration: none;
-}
-.link:hover, a[class*="text-"] {
-  text-decoration: none;
-}
-
-.link[class*="text-"] {
-  border-bottom: 2px solid;
-  transition: 0.15s ease-in-out;
-}
-
-.link.text-blue {
-  border-color: var(--c-blue);
-}
-.link.text-blue:hover {
-  color: var(--c-blue);
-}
-
-.link.text-cyan {
-  border-color: var(--c-cyan);
-}
-.link.text-cyan:hover {
-  color: var(--c-cyan);
-}
-
-.link.text-green {
-  border-color: var(--c-green);
-}
-.link.text-green:hover {
-  color: var(--c-green);
-}
-
-.link.text-magenta {
-  border-color: var(--c-magenta);
-}
-.link.text-magenta:hover {
-  color: var(--c-magenta);
-}
-
-.link.text-red {
-  border-color: var(--c-red);
-}
-.link.text-red:hover {
-  color: var(--c-red);
-}
-
-.link.text-white {
-  border-color: var(--c-white);
-}
-.link.text-white:hover {
-  color: var(--c-white);
-}
-
-.link.text-yellow {
-  border-color: var(--c-yellow);
-}
-.link.text-yellow:hover {
-  color: var(--c-yellow);
-}
-
-.fade-in-up {
+.about-content {
   opacity: 0;
   transform: translateY(1rem);
-  animation: fadeInUp 2s ease 4s forwards;
+  animation: fadeInUp 2s ease 2s forwards;
 }
 
-.fade-in-up > p {
-  margin-bottom: 1.2rem;
-  font-size: 1.15rem;
+.about-content > p {
+  margin-top: 1.2rem;
+}
+
+.about-experiences > li {
+  list-style-type: none;
+}
+.about-experiences > li:before {
+  content: ">";
+  margin-right: 0.5em;
 }
 
 @keyframes fadeInUp {
