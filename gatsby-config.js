@@ -5,7 +5,7 @@ module.exports = {
     author: `@hryoma`,
     keywords: `computer science, cybersecurity, software developer, web development, frontend, backend`,
     siteUrl: `https://ryoma.dev`,
-    image: `assets/icons/icon-site.png`,
+    image: `src/assets/icons/favicon.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -57,6 +57,15 @@ module.exports = {
             }
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Ryoma Harris`,
+        short_name: `Ryoma`,
+        start_url: `/`,
+        icon: `src/assets/icons/favicon.png`,
       },
     },
   ],
