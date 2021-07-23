@@ -19,6 +19,7 @@
   font-size: 2rem;
   font-family: Menlo, Monaco, "Lucida Console", "Courier New", Courier, monospace;
   text-align: center;
+  font-weight: bold;
   background: var(--c-bg-elevated);
   width: 100%;
   padding: 10px 0;
@@ -109,8 +110,26 @@
 
 /* Override header.css styles */
 
-.header-wrapper > * {
+.header-wrapper {
+  display: inline-block;
+  justify-content: space-between;
+}
+
+.header-wrapper #navbar {
   position: absolute !important;
   top: auto !important;
   bottom: 0;
+}
+
+.header-wrapper .sm-icons {
+  position: absolute;
+  margin-right: 30px;
+  right: 0;
+}
+
+@media screen and (max-width: 360px) {
+  .header-wrapper .sm-icons {
+    visibility: hidden;
+    opacity: 0;
+  }
 }

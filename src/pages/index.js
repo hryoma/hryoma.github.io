@@ -1,11 +1,13 @@
 import * as React from "react"
 import resumePdf from "../assets/Resume.pdf"
 
-import Header from "../components/header"
 import Seo from "../components/seo"
+import {ExtLink} from "../components/extLink";
+import Header from "../components/header"
+import Brand from "../components/brand";
+import SmIcons from "../components/sm-icons";
 
 import "../styles/index.css"
-import {ExtLink} from "../components/extLink";
 
 const IndexPage = () => {
   return (
@@ -15,10 +17,7 @@ const IndexPage = () => {
         <div className="terminal-header">>_</div>
         <div className="terminal-content">
           <p className="terminal-title">
-            <span className="text-green">ryoma</span>
-            <span className="text-white">:</span>
-            <span className="text-magenta">~</span>
-            <span className="text-white">$ </span>
+            <Brand/>
             echo ${'{'}<span className="typewriter-text">Ryoma_Harris</span>{'}'}
           </p>
           <div className="about-content">
@@ -47,6 +46,7 @@ const IndexPage = () => {
         </div>
         <div className="header-wrapper">
           <Header/>
+          <SmIcons/>
         </div>
       </div>
     </>

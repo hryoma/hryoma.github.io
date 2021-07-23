@@ -8,11 +8,6 @@
   transition: all ease-in-out 0.15s;
 }
 
-.card:hover {
-  box-shadow: 0 2px 25px 5px var(--c-shadow-light);
-  transform: translateY(-3px);
-}
-
 .image {
   width: 100%;
   display: flex;

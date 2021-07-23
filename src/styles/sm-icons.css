@@ -1,0 +1,17 @@
+
+.sm-icons {
+  float: right;
+  z-index: 100;
+}
+
+.sm-icon {
+  margin-left: 15px;
+  height: 1.2rem;
+  width: 1.2rem;
+  transition: all ease-in-out 0.15s;
+}
+
+.sm-icon:hover {
+  filter: drop-shadow(0 0 3px var(--c-cyan));
+  transform: scale(1.25);
+}

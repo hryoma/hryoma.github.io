@@ -33,7 +33,7 @@ const ProjectCard = ({ node }) => {
         { !showPost && <h2 className="title">{fm.title}</h2> }
 
         <small className="data">{fm.role}</small>
-        <br/>
+        <b>ᆞ</b>
         <small className="data">{fm.start_date} – {fm.end_date}</small>
 
         <p className="desc">{fm.desc}</p>

@@ -17,7 +17,7 @@ const PortfolioPage = ({ data }) => {
         <div className="grid-layout">
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <div className="card-wrapper">
-            <ProjectCard node={node} />
+              <ProjectCard node={node} />
             </div>
           ))}
         </div>
