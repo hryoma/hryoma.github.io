@@ -16,14 +16,11 @@ const IndexPage = () => {
       <div className="terminal-window">
         <div className="terminal-header">>_</div>
         <div className="terminal-content">
-          <p className="terminal-title">
-            <Brand/>
-            echo ${'{'}<span className="typewriter-text">Ryoma_Harris</span>{'}'}
-          </p>
-          <div className="about-content">
-            <p>> Hi!</p>
-            <p>> I'm a computer science major at the University of Pennsylvania.</p>
-            <p>> Currently, I'm...</p>
+          <p><Brand/>echo ${'{'}<span className="typewriter-text">About_Me</span>{'}'}</p>
+          <div className="about-me">
+            <p>Hi, I'm Ryoma.</p>
+            <p>I study computer science at the University of Pennsylvania.</p>
+            <p>Currently, I'm...</p>
             <ul className="about-experiences">
               <li>an IT intern at{' '}
                 <ExtLink className={"text-cyan"} link={"https://shopy2go.com"} title={"Shopy2Go"}/>
@@ -36,8 +33,9 @@ const IndexPage = () => {
               <li>a co-founding CTO/full-stack developer at{' '}
                 <ExtLink className={"text-green"} link={"http://cynfolia.com"} title={"Cynfolia"}/>
               </li>
+              <li>practicing cybersecurity on picoCTF</li>
             </ul>
-            <p>> You can check out my résumé{' '}
+            <p>You can check out my résumé{' '}
               <ExtLink className="text-yellow" link={resumePdf} title={"here"}/>{' '}
               and my portfolio{' '}
               <ExtLink className="text-blue" link={"portfolio"} title={"here"}/>!

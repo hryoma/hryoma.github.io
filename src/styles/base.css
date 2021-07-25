@@ -86,12 +86,6 @@ h1, h2, h3, h4, h5, h6, p, small, pre, code, a, span, label {
   margin: 0;
   word-break: normal;
 }
-ul, li {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-}
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--c-cyan);
@@ -138,7 +132,14 @@ h6 {
   margin-bottom: 0.8rem;
 }
 
-p {
+ul, li {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+p, ul, li {
   font-size: 1.1rem;
   line-height: 1.5rem;
 }

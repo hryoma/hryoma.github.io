@@ -30,16 +30,10 @@
 }
 
 .terminal-content {
-  font-size: 1.15rem;
   padding: 30px;
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-}
-
-.terminal-title {
-  font-family: var(--font-monospace);
-  margin-bottom: 2.4rem;
 }
 
 .typewriter-text {
@@ -59,16 +53,18 @@
   right: 0;
 }
 
+/* hides text to right of the blinking cursor */
 .typewriter-text::before {
   background: var(--c-bg);
   animation: typewriter var(--typewriter-speed) steps(12) 0.5s forwards;
 }
 
+/* blinking cursor */
 .typewriter-text::after {
   width: .125em;
   background: transparent;
   animation: typewriter var(--typewriter-speed) steps(12) 0.5s forwards,
-             typeblink 750ms steps(12) 6;
+             typeblink 750ms steps(6) 3;
 }
 
 @keyframes typewriter {
@@ -83,14 +79,19 @@
   }
 }
 
-.about-content {
+.about-me {
+  margin-top: 2rem;
   opacity: 0;
   transform: translateY(1rem);
   animation: fadeInUp 2s ease 2s forwards;
 }
 
-.about-content > p {
-  margin-top: 1.2rem;
+.about-me > p{
+  margin-top: 1.25rem;
+}
+.about-me > p:before {
+  content: ">";
+  margin-right: 0.5em;
 }
 
 .about-experiences > li {

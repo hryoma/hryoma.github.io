@@ -14,7 +14,7 @@
   transition: all ease-in-out 0.15s;
 }
 
-.brand:hover > * {
+.brand > a:hover {
   text-decoration: none;
   filter: drop-shadow(0 0 5px var(--c-cyan));
 }
