@@ -5,10 +5,8 @@ module.exports = {
     author: `@hryoma`,
     keywords: `computer science, cybersecurity, software developer, web development, frontend, backend`,
     siteUrl: `https://ryoma.dev`,
-    image: `src/assets/icons/favicon.png`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,14 +25,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        rule: {
-          include: /images\/svg\/.*svg$/,
-        },
-      },
-    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {

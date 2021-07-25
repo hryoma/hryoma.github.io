@@ -2,6 +2,12 @@
   font-weight: bold;
   display: inline;
   margin-right: 15px;
+  height: max-content;
+}
+
+.brand:hover {
+  text-decoration: none;
+  filter: drop-shadow(0 0 5px var(--c-cyan));
 }
 
 .brand > * {
@@ -12,9 +18,4 @@
   -ms-user-select: none;
   user-select: none;
   transition: all ease-in-out 0.15s;
-}
-
-.brand > a:hover {
-  text-decoration: none;
-  filter: drop-shadow(0 0 5px var(--c-cyan));
 }
