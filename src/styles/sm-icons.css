@@ -13,5 +13,5 @@
 
 .sm-icon:hover {
   filter: drop-shadow(0 0 3px var(--c-cyan));
-  transform: scale(1.25);
+  transform: scale(1.15);
 }

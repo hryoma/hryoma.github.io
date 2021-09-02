@@ -12,13 +12,10 @@ import "../styles/index.css"
 const AboutMe = () => {
   return (
     <div className="about-me">
-      <p>Hi, I'm Ryoma.</p>
-      <p>I study computer science at the University of Pennsylvania.</p>
+      <p>Hi! I'm Ryoma</p>
+      <p>I study computer science at the University of Pennsylvania</p>
       <p>Currently, I'm...</p>
       <ul className="about-experiences">
-        <li>an IT intern at{' '}
-          <ExtLink className={"text-cyan"} link={"https://shopy2go.com"} title={"Shopy2Go"}/>
-        </li>
         <li>a web developer at{' '}
           <ExtLink className={"text-blue"}
                    link={"https://pennclimateventures.org"}
@@ -29,11 +26,15 @@ const AboutMe = () => {
         </li>
         <li>practicing cybersecurity on picoCTF</li>
       </ul>
+      <p>This past summer, I was an IT intern at{' '}
+          <ExtLink className={"text-cyan"} link={"https://shopy2go.com"} title={"Shopy2Go"}/>
+      </p>
       <p>You can check out my résumé{' '}
         <ExtLink className="text-yellow" link={resumePdf} title={"here"}/>{' '}
         and my portfolio{' '}
         <ExtLink className="text-blue" link={"portfolio"} title={"here"}/>!
       </p>
+      <p>Feel free to reach out to me at: ryomah [at] seas.upenn.edu</p>
     </div>
   )
 }

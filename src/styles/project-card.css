@@ -29,9 +29,15 @@
 }
 
 .icon {
-  height: 18px;
-  width: 18px;
+  height: 1.2rem;
+  width: 1.2rem;
+  transition: all ease-in-out 0.15s;
+  margin-left: 10px;
   margin-right: 10px;
+}
+.icon:hover {
+  filter: drop-shadow(0 0 3px var(--c-cyan));
+  transform: scale(1.15);
 }
 
 .tag {

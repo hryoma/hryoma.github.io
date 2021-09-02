@@ -9,9 +9,6 @@ import "../styles/sm-icons.css"
 
 const SmIcons = () => (
   <div className="sm-icons">
-    <ExtLink link="mailto:ryomah@seas.upenn.edu">
-      <img className="sm-icon" src={iconEmail} alt="email"/>
-    </ExtLink>
     <ExtLink link="https://github.com/hryoma">
       <img className="sm-icon" src={iconGithub} alt="github"/>
     </ExtLink>
