@@ -3,9 +3,9 @@
   --font-serif: Palatino, American Typewriter, serif;
   --font-monospace: SourceCodePro, Palatino, Lucida Console, Consolas, Andale Mono, Courier, monospace;
 
-  --c-bg-deeper: hsl(218, 16%, 16%);
-  --c-bg: hsl(220, 16%, 22%);
-  --c-bg-elevated: hsl(222, 16%, 28%);
+  --c-bg-deeper: hsl(221, 21%, 15%);
+  --c-bg: hsl(221, 21%, 22%);
+  --c-bg-elevated: hsl(221, 21%, 29%);
   --c-cursor: hsl(219, 28%, 80%);
   --c-text: hsl(219, 28%, 80%);
   --c-text-bold: hsl(219, 28%, 80%);
