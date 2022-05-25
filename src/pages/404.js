@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import Layout from "../components/layout"
+import Layout, {Container} from "../components/layout"
 import Seo from "../components/seo"
 import "../styles/base.css"
 import {ExtLink} from "../components/extLink";
@@ -8,7 +8,7 @@ import {ExtLink} from "../components/extLink";
 const NotFoundPage = () => (
   <Layout>
     <Seo title="404: Not found" />
-    <div className="container">
+    <Container>
       <h1>404: Page Not Found</h1>
       <p>
         Looking for the Equipotential Grapher? The page has been relocated
@@ -18,7 +18,7 @@ const NotFoundPage = () => (
       <p>Go back to the main page <ExtLink link={"https://ryoma.dev"} title={"here"}/>.
 
       </p>
-    </div>
+    </Container>
   </Layout>
 )
 

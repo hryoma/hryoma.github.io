@@ -91,53 +91,55 @@ const ProjectCard = ({ node }) => {
   }
 
   return (
-    <CardWrapper>
-      <CardImage>
-        <GatsbyImage image={coverImageData} alt={fm.title}/>
-      </CardImage>
-      <CardContent>
-        { showPost &&
-          <ProjectTitle>
-            <Link to={node.fields.slug}>{fm.title}</Link>
-          </ProjectTitle>
-        }
-        { !showPost && <ProjectTitle>{fm.title}</ProjectTitle> }
-
-        <ProjectRole>{fm.role}</ProjectRole>
-        <b>ᆞ</b>
-        <ProjectDate>{fm.start_date} – {fm.end_date}</ProjectDate>
-
-        <ProjectDescription>{fm.desc}</ProjectDescription>
-
-        <ProjectLinks>
-          { fm.github_link &&
-            <ExtLink link={fm.github_link}>
-              <LinkIcon src={githubIcon} alt={"github"}/>
-            </ExtLink>
+    <div>
+      <CardWrapper>
+        <CardImage>
+          <GatsbyImage image={coverImageData} alt={fm.title}/>
+        </CardImage>
+        <CardContent>
+          { showPost &&
+            <ProjectTitle>
+              <Link to={node.fields.slug}>{fm.title}</Link>
+            </ProjectTitle>
           }
-          { fm.external_link &&
-            <ExtLink link={fm.external_link}>
-              <LinkIcon src={linkIcon} alt={"external link"}/>
-            </ExtLink>
-          }
-        </ProjectLinks>
+          { !showPost && <ProjectTitle>{fm.title}</ProjectTitle> }
 
-        <ProjectTagsContainer>
-          {fm.tags_type && fm.tags_type.map( ( tag ) => (
-            <ProjectTag className="text-magenta">{tag}</ProjectTag>
-          ))}
-          {fm.tags_framework && fm.tags_framework.map( ( tag ) => (
-            <ProjectTag className="text-yellow">{tag}</ProjectTag>
-          ))}
-          {fm.tags_language && fm.tags_language.map( ( tag ) => (
-            <ProjectTag className="text-green">{tag}</ProjectTag>
-          ))}
-          {fm.tags_tech && fm.tags_tech.map( ( tag ) => (
-            <ProjectTag className="text-blue">{tag}</ProjectTag>
-          ))}
-        </ProjectTagsContainer>
-      </CardContent>
-    </CardWrapper>
+          <ProjectRole>{fm.role}</ProjectRole>
+          <b>ᆞ</b>
+          <ProjectDate>{fm.start_date} – {fm.end_date}</ProjectDate>
+
+          <ProjectDescription>{fm.desc}</ProjectDescription>
+
+          <ProjectLinks>
+            { fm.github_link &&
+              <ExtLink link={fm.github_link}>
+                <LinkIcon src={githubIcon} alt={"github"}/>
+              </ExtLink>
+            }
+            { fm.external_link &&
+              <ExtLink link={fm.external_link}>
+                <LinkIcon src={linkIcon} alt={"external link"}/>
+              </ExtLink>
+            }
+          </ProjectLinks>
+
+          <ProjectTagsContainer>
+            {fm.tags_type && fm.tags_type.map( ( tag ) => (
+              <ProjectTag className="text-magenta">{tag}</ProjectTag>
+            ))}
+            {fm.tags_framework && fm.tags_framework.map( ( tag ) => (
+              <ProjectTag className="text-yellow">{tag}</ProjectTag>
+            ))}
+            {fm.tags_language && fm.tags_language.map( ( tag ) => (
+              <ProjectTag className="text-green">{tag}</ProjectTag>
+            ))}
+            {fm.tags_tech && fm.tags_tech.map( ( tag ) => (
+              <ProjectTag className="text-blue">{tag}</ProjectTag>
+            ))}
+          </ProjectTagsContainer>
+        </CardContent>
+      </CardWrapper>
+    </div>
   )
 }
 

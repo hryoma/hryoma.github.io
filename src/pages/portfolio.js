@@ -1,27 +1,23 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
+import Layout, {Container, GridLayout} from "../components/layout"
 import Seo from "../components/seo"
 import ProjectCard from "../components/project-card"
-
-import "../styles/portfolio.css"
 
 
 const PortfolioPage = ({ data }) => {
   return (
     <Layout>
       <Seo title="Portfolio" />
-      <div className="container-wide">
+      <Container wide>
         <h1>Portfolio</h1>
-        <div className="grid-layout">
+        <GridLayout childWidth={300}>
           {data.allMarkdownRemark.edges.map(({ node }) => (
-            <div className="card-wrapper">
-              <ProjectCard node={node} />
-            </div>
+            <ProjectCard node={node} />
           ))}
-        </div>
-      </div>
+        </GridLayout>
+      </Container>
     </Layout>
   )
 }
