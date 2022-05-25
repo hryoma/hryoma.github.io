@@ -1,5 +1,5 @@
 :root {
-  --font-sans-serif: 'Avenir', Verdana, Helvetica Neue, Arial, Courier, sans-serif;
+  --font-sans-serif: 'Poppins', 'Avenir', Verdana, Helvetica Neue, Arial, Courier, sans-serif;
   --font-serif: Palatino, American Typewriter, serif;
   --font-monospace: SourceCodePro, Palatino, Lucida Console, Consolas, Andale Mono, Courier, monospace;
 
@@ -40,6 +40,20 @@
   --c-bright-white: hsl(218, 27%, 94%);
 
   --c-shadow-light: hsla(0, 0%, 0%, 0.05)
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"),
+  url("../fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"),
+  url("../fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: bold;
 }
 
 @font-face {
