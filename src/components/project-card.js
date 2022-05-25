@@ -2,71 +2,142 @@ import * as React from "react"
 import { ExtLink } from "./extLink"
 import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-
-import "../styles/project-card.css"
+import styled from "styled-components"
 
 import githubIcon from "../assets/icons/icon-github.png"
 import linkIcon from "../assets/icons/icon-link.png"
+
+
+const CardWrapper = styled.div`
+  max-width: 360px;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px 5px var(--c-shadow-light);
+  background-color: var(--c-bg);
+  margin: 0 auto;
+  padding: 15px 15px 30px;
+  transition: all ease-in-out 0.15s;
+`
+
+const CardImage = styled.div`
+  width: 100%;
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+`
+
+const CardContent = styled.div`
+`
+
+const ProjectTitle = styled.h4`
+  margin-top: 15px;
+  margin-bottom: 5px;
+`
+
+const ProjectRole = styled.small`
+  color: var(--c-text-mute);
+  margin-top: 5px;
+`
+
+const ProjectDate = styled.small`
+  color: var(--c-text-mute);
+  margin-top: 5px;
+`
+
+const ProjectDescription = styled.p`
+  margin-top: 15px;
+`
+
+const ProjectLinks = styled.div`
+  margin-top: 15px;
+`
+
+const LinkIcon = styled.image`
+  height: 1.2rem;
+  width: 1.2rem;
+  transition: all ease-in-out 0.15s;
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  &:hover {
+    filter: drop-shadow(0 0 3px var(--c-cyan));
+    transform: scale(1.15);
+  }
+`
+
+const ProjectTagsContainer = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+`
+
+const ProjectTag = styled.div`
+  font-size: 0.85rem;
+  background-color: var(--c-bg-elevated);
+  border-radius: 10px;
+  padding: 1px 8px;
+  margin: 3px;
+  display: block;
+`
 
 const ProjectCard = ({ node }) => {
 
   const fm = node.frontmatter
   const coverImageData = getImage(fm.cover_image)
 
-  var showPost = false
+  let showPost = false
   console.log(fm.visibility)
   if (fm.visibility === "post") {
     showPost = true
   }
 
   return (
-    <div className="card">
-      <div className="image">
+    <CardWrapper>
+      <CardImage>
         <GatsbyImage image={coverImageData} alt={fm.title}/>
-      </div>
-      <div className="content">
+      </CardImage>
+      <CardContent>
         { showPost &&
-          <h2 className="title">
+          <ProjectTitle>
             <Link to={node.fields.slug}>{fm.title}</Link>
-          </h2>
+          </ProjectTitle>
         }
-        { !showPost && <h2 className="title">{fm.title}</h2> }
+        { !showPost && <ProjectTitle>{fm.title}</ProjectTitle> }
 
-        <small className="data">{fm.role}</small>
+        <ProjectRole>{fm.role}</ProjectRole>
         <b>ᆞ</b>
-        <small className="data">{fm.start_date} – {fm.end_date}</small>
+        <ProjectDate>{fm.start_date} – {fm.end_date}</ProjectDate>
 
-        <p className="desc">{fm.desc}</p>
+        <ProjectDescription>{fm.desc}</ProjectDescription>
 
-        <div className="links">
+        <ProjectLinks>
           { fm.github_link &&
             <ExtLink link={fm.github_link}>
-              <img className="icon" src={githubIcon} alt={"github"}/>
+              <LinkIcon src={githubIcon} alt={"github"}/>
             </ExtLink>
           }
           { fm.external_link &&
             <ExtLink link={fm.external_link}>
-              <img className="icon" src={linkIcon} alt={"external link"}/>
+              <LinkIcon src={linkIcon} alt={"external link"}/>
             </ExtLink>
           }
-        </div>
+        </ProjectLinks>
 
-        <div className="tags">
+        <ProjectTagsContainer>
           {fm.tags_type && fm.tags_type.map( ( tag ) => (
-            <span className="tag text-magenta">{tag}</span>
+            <ProjectTag className="text-magenta">{tag}</ProjectTag>
           ))}
           {fm.tags_framework && fm.tags_framework.map( ( tag ) => (
-            <span className="tag text-yellow">{tag}</span>
+            <ProjectTag className="text-yellow">{tag}</ProjectTag>
           ))}
           {fm.tags_language && fm.tags_language.map( ( tag ) => (
-            <span className="tag text-green">{tag}</span>
+            <ProjectTag className="text-green">{tag}</ProjectTag>
           ))}
           {fm.tags_tech && fm.tags_tech.map( ( tag ) => (
-            <span className="tag text-blue">{tag}</span>
+            <ProjectTag className="text-blue">{tag}</ProjectTag>
           ))}
-        </div>
-      </div>
-    </div>
+        </ProjectTagsContainer>
+      </CardContent>
+    </CardWrapper>
   )
 }
 
