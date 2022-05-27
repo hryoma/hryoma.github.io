@@ -10,7 +10,7 @@ const PortfolioPage = ({ data }) => {
     <PageLayout title="Portfolio">
       <Container wide>
         <h1>Portfolio</h1>
-        <GridLayout childWidth={300}>
+        <GridLayout childWidth={600}>
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <ProjectCard node={node} />
           ))}

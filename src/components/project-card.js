@@ -3,34 +3,55 @@ import styled from "styled-components"
 
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
-import {ExtIconLink, ExtLink} from "./link"
+
+import { ExtIconLink } from "./link"
 
 import icGitHub from "../assets/icons/icon-github.png"
 import icLink from "../assets/icons/icon-link.png"
 
 
 const CardWrapper = styled.div`
-  max-width: 360px;
-  border-radius: 8px;
-  box-shadow: 0 2px 15px 5px var(--c-shadow-light);
-  background-color: var(--c-bg);
-  margin: 0 auto;
-  padding: 15px 15px 30px;
-  transition: all ease-in-out 0.15s;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 30px;
+  
+  @media (max-width: 768px) {
+    max-width: 500px;
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+
+  @media (max-width: 576px) {
+    max-width: 350px;
+    flex-flow: column wrap;
+    justify-content: center;
+  } 
 `
 
-const CardImage = styled.div`
-  width: 100%;
-  display: flex;
+const CardImage = styled(GatsbyImage)`
+  display: block;
+  height: auto;
+  width: auto;
+  max-height: 180px;
+  max-width: 240px;
   border-radius: 5px;
-  overflow: hidden;
+  object-fit: cover;
+  margin: 0 auto;
 `
 
 const CardContent = styled.div`
+  min-width: 300px;
+  
+  @media (max-width: 768px) {
+    width: auto;
+    min-width: 100px;
+  }
 `
 
 const ProjectTitle = styled.h4`
-  margin-top: 15px;
   margin-bottom: 5px;
 `
 
@@ -83,9 +104,7 @@ const ProjectCard = ({ node }) => {
   return (
     <div>
       <CardWrapper>
-        <CardImage>
-          <GatsbyImage image={coverImageData} alt={fm.title}/>
-        </CardImage>
+        <CardImage image={coverImageData} alt={fm.title}/>
         <CardContent>
           { showPost &&
             <ProjectTitle>
