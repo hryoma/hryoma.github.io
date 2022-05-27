@@ -1,15 +1,9 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import Header from "./header"
+import Seo from "./seo";
+import Navbar from "./navbar"
 import "../styles/base.css"
 
 
@@ -45,31 +39,30 @@ export const Container = styled.div`
         max-width: 1440px;
       }`
     : ``
-  )}
+)}
 `
 
 export const GridLayout = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(${props => (props.childWidth
-      ? props.childWidth : 300)}px, max-content));
+  ? props.childWidth : 300)}px, max-content));
   grid-gap: 45px;
   justify-content: center;
   padding: initial;
 `
 
-const Layout = ({ children }) => {
+const PageLayout = ({title, children}) => {
   return (
     <>
-      <Header />
-      <div>
-        <main>{children}</main>
-      </div>
+      <Seo title={title}/>
+      <Navbar/>
+      <main>{children}</main>
     </>
   )
 }
 
-Layout.propTypes = {
+PageLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default PageLayout

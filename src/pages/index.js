@@ -3,7 +3,7 @@ import resumePdf from "../assets/Resume.pdf"
 
 import Seo from "../components/seo"
 import {ExtLink} from "../components/extLink";
-import Header from "../components/header"
+import Navbar from "../components/navbar"
 import Brand from "../components/brand";
 import SmIcons from "../components/sm-icons";
 
@@ -41,7 +41,7 @@ const AboutMe = () => {
 
 const IndexPage = () => {
   return (
-    <>
+    <main>
       <Seo title="Home"/>
       <div className="terminal-window">
         <div className="terminal-header">>_</div>
@@ -50,11 +50,11 @@ const IndexPage = () => {
           <AboutMe/>
         </div>
         <div className="header-wrapper">
-          <Header/>
+          <Navbar/>
           <SmIcons/>
         </div>
       </div>
-    </>
+    </main>
   )
 }
 

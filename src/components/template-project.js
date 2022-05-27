@@ -1,15 +1,13 @@
 import { graphql, Link } from "gatsby"
 import React from "react"
-import Seo from "./seo"
-import Layout, {Container} from "./layout"
+import PageLayout, {Container} from "./layout"
 import "../styles/markdown.css"
 
 export default function TemplateProject({ data }) {
   const project = data.markdownRemark
 
   return (
-    <Layout className="template-project project-node">
-      <Seo title={project.frontmatter.title} />
+    <PageLayout title={project.frontmatter.title} className="template-project project-node">
       <Container>
         <h1>{project.frontmatter.title}</h1>
         <div className="markdown" dangerouslySetInnerHTML={{ __html: project.html }} />
@@ -17,7 +15,7 @@ export default function TemplateProject({ data }) {
           <Link to="/portfolio/">Back to Portfolio</Link>
         </div>
       </Container>
-    </Layout>
+    </PageLayout>
   )
 }
 

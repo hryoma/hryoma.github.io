@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Brand from "./brand";
 import "../styles/header.css"
 
-const Header = () => (
+const Navbar = () => (
   <header id="navbar">
     <div className="nav-wrapper">
       <Brand/>
@@ -16,4 +16,4 @@ const Header = () => (
   </header>
 )
 
-export default Header
+export default Navbar

@@ -1,15 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout, {Container, GridLayout} from "../components/layout"
-import Seo from "../components/seo"
+import PageLayout, {Container, GridLayout} from "../components/layout"
 import ProjectCard from "../components/project-card"
 
 
 const PortfolioPage = ({ data }) => {
   return (
-    <Layout>
-      <Seo title="Portfolio" />
+    <PageLayout title="Portfolio">
       <Container wide>
         <h1>Portfolio</h1>
         <GridLayout childWidth={300}>
@@ -18,7 +16,7 @@ const PortfolioPage = ({ data }) => {
           ))}
         </GridLayout>
       </Container>
-    </Layout>
+    </PageLayout>
   )
 }
 

@@ -1,13 +1,11 @@
 import * as React from "react"
 
-import Layout, {Container} from "../components/layout"
-import Seo from "../components/seo"
-import "../styles/base.css"
+import PageLayout, {Container} from "../components/layout"
 import {ExtLink} from "../components/extLink";
+import "../styles/base.css"
 
 const NotFoundPage = () => (
-  <Layout>
-    <Seo title="404: Not found" />
+  <PageLayout title="404: Not found">
     <Container>
       <h1>404: Page Not Found</h1>
       <p>
@@ -15,11 +13,9 @@ const NotFoundPage = () => (
         to <ExtLink link={"https://equipotential-grapher-9bkly.ondigitalocean.app"} title="here"/>.
       </p>
       <br/>
-      <p>Go back to the main page <ExtLink link={"https://ryoma.dev"} title={"here"}/>.
-
-      </p>
+      <p>Go back to the main page <ExtLink link={"https://ryoma.dev"} title={"here"}/>.</p>
     </Container>
-  </Layout>
+  </PageLayout>
 )
 
 export default NotFoundPage
