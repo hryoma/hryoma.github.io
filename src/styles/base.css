@@ -20,7 +20,7 @@
 }
 
 :root {
-  --font-sans-serif: 'Poppins', 'Avenir', Verdana, Helvetica Neue, Arial, Courier, sans-serif;
+  --font-sans-serif: 'Poppins', 'Avenir', Verdana, Helvetica Neue, Arial, sans-serif;
   --font-serif: Palatino, American Typewriter, serif;
   --font-monospace: SourceCodePro, Palatino, Lucida Console, Consolas, Andale Mono, Courier, monospace;
 
@@ -152,10 +152,6 @@ ul, li {
 p, ul, li {
   font-size: 1.1rem;
   line-height: 1.5rem;
-}
-
-.markdown p {
-  margin-bottom: 1.25rem;
 }
 
 small {
