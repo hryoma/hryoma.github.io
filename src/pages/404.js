@@ -2,7 +2,6 @@ import * as React from "react"
 
 import PageLayout, {Container} from "../components/layout"
 import {ExtLink} from "../components/extLink";
-import "../styles/base.css"
 
 const NotFoundPage = () => (
   <PageLayout title="404: Not found">
