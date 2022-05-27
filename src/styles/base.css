@@ -94,52 +94,15 @@ body {
 h1, h2, h3, h4, h5, h6, p, small, pre, code, a, span, label {
   padding: 0;
   margin: 0;
+  line-height: 1.5rem;
   word-break: normal;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: var(--c-cyan);
-  font-family: var(--font-monospace);
-  text-rendering: optimizeLegibility;
 }
 
 h1::before {
   content: '';
   border: 2px solid var(--c-cyan);
   position: relative;
-  margin-right: 10px;
-}
-
-h1 {
-  font-size: 2.25rem;
-  line-height: 2.25rem;
-  margin-bottom: 2.25rem;
-}
-
-h2 {
-  font-size: 1.7rem;
-  line-height: 1.7rem;
-  margin-bottom: 1.7rem;
-}
-h3 {
-  font-size: 1.4rem;
-  line-height: 1.4rem;
-  margin-bottom: 1.4rem;
-}
-h4 {
-  font-size: 1.2rem;
-  line-height: 1.2rem;
-  margin-bottom: 1.2rem;
-}
-h5 {
-  font-size: 1rem;
-  line-height: 1rem;
-  margin-bottom: 1rem;
-}
-h6 {
-  font-size: 0.8rem;
-  line-height: 0.8rem;
-  margin-bottom: 0.8rem;
+  margin-right: 15px;
 }
 
 ul, li {
@@ -150,13 +113,13 @@ ul, li {
 }
 
 p, ul, li {
-  font-size: 1.1rem;
-  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.3rem;
 }
 
 small {
-  font-size: 0.9rem;
-  line-height: 0.9rem;
+  color: var(--c-text-mute);
+  line-height: 1rem;
 }
 
 a {

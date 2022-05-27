@@ -29,7 +29,7 @@ export const Container = styled.div`
     max-width: 960px;
   }
   
-  ${props => (props.wide
+   ${props => (props.wide || props.superwide
     ? `
       @media (min-width: 1250px) {
         max-width: 1200px;
@@ -39,7 +39,19 @@ export const Container = styled.div`
         max-width: 1440px;
       }`
     : ``
-)}
+  )} 
+
+  ${props => (props.superwide
+    ? `
+      @media (min-width: 1750px) {
+        max-width: 1700px;
+      }
+      
+      @media (min-width: 2000px) {
+        max-width: 1950px;
+      }`
+    : ``
+  )}
 `
 
 export const GridLayout = styled.div`

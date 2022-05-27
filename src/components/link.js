@@ -28,10 +28,10 @@ const IconImg = styled.img`
   height: 1.2rem;
   width: 1.2rem;
   transition: all ease-in-out 0.15s;
+  filter: brightness(0.75);
   
   &:hover {
-    filter: drop-shadow(0 0 3px var(--c-cyan));
-    transform: scale(1.1);
+    filter: brightness(1);
   }
 `
 

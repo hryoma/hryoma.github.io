@@ -1,6 +1,6 @@
 ---
 cover_image: ./cover.png
-title: Gatsby Portfolio
+title: Personal Website
 role: Independent Project
 start_date: 2021-06-11
 end_date: 2021-07-22

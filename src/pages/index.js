@@ -64,8 +64,8 @@ const AboutMe = () => {
       </p>
       <p>You can check out my résumé{' '}
         <ExtLink className="text-yellow" link={resumePdf} title={"here"}/>{' '}
-        and my portfolio{' '}
-        <IntLink className="text-blue" link={"portfolio"} title={"here"}/>!
+        and my projects{' '}
+        <IntLink className="text-blue" link={"projects"} title={"here"}/>!
       </p>
       <p>Feel free to reach out to me at: ryomah [at] seas.upenn.edu</p>
     </AboutMeWrapper>

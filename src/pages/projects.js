@@ -5,12 +5,15 @@ import PageLayout, {Container, GridLayout} from "../components/layout"
 import ProjectCard from "../components/project-card"
 
 
-const PortfolioPage = ({ data }) => {
+const ProjectsPage = ({ data }) => {
   return (
-    <PageLayout title="Portfolio">
+    <PageLayout title="Projects">
       <Container wide>
-        <h1>Portfolio</h1>
-        <GridLayout childWidth={600}>
+        <h1>Projects</h1>
+      </Container>
+
+      <Container superwide>
+        <GridLayout childWidth={535}>
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <ProjectCard node={node} />
           ))}
@@ -60,4 +63,4 @@ export const query = graphql`
   }
 `
 
-export default PortfolioPage
+export default ProjectsPage

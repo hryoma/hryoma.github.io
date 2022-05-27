@@ -42,7 +42,7 @@ const Navbar = () => (
       <Brand/>
       <NavMenu>
         <p>ls</p>
-        <NavLink to="/portfolio/">portfolio/</NavLink>
+        <NavLink to="/projects/">projects/</NavLink>
       </NavMenu>
     </NavWrapper>
   </Nav>

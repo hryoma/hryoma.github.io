@@ -11,23 +11,35 @@ import icLink from "../assets/icons/icon-link.png"
 
 
 const CardWrapper = styled.div`
-  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-flow: row nowrap;
-  gap: 30px;
+  gap: 5px 15px;
+  justify-content: center;
   
   @media (max-width: 768px) {
     max-width: 500px;
-    flex-flow: column wrap;
-    justify-content: center;
+    flex-flow: column nowrap;
   }
 
   @media (max-width: 576px) {
     max-width: 350px;
-    flex-flow: column wrap;
-    justify-content: center;
+    flex-flow: column nowrap;
+  } 
+`
+
+const CardContentLeft = styled.div`
+  flex: 1;
+  width: 200px;
+  max-width: 200px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: 0 auto;
+  
+  @media (max-width: 768px) {
+    width: 100%;
   } 
 `
 
@@ -42,8 +54,19 @@ const CardImage = styled(GatsbyImage)`
   margin: 0 auto;
 `
 
-const CardContent = styled.div`
-  min-width: 300px;
+const ProjectDate = styled.small`
+  margin: 5px auto;
+`
+
+const ProjectLinks = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  gap: 15px;
+`
+
+const CardContentRight = styled.div`
+  flex: 1;
+  width: 320px;
   
   @media (max-width: 768px) {
     width: auto;
@@ -51,43 +74,24 @@ const CardContent = styled.div`
   }
 `
 
-const ProjectTitle = styled.h4`
-  margin-bottom: 5px;
-`
-
-const ProjectRole = styled.small`
-  color: var(--c-text-mute);
-  margin-top: 5px;
-`
-
-const ProjectDate = styled.small`
-  color: var(--c-text-mute);
-  margin-top: 5px;
+const ProjectTitle = styled.h3`
+  margin-top: 0;
 `
 
 const ProjectDescription = styled.p`
-  margin-top: 15px;
-`
-
-const ProjectLinks = styled.div`
-  margin-top: 15px;
-  display: flex;
-  flex-flow: row wrap;
-  gap: 15px;
+  margin: 10px auto;
 `
 
 const ProjectTagsContainer = styled.div`
-  margin-top: 15px;
   display: flex;
   flex-flow: row wrap;
-  gap: 10px;
+  gap: 7px 7px;
 `
 
-const ProjectTag = styled.div`
-  font-size: 0.85rem;
+const ProjectTag = styled.small`
   background-color: var(--c-bg-elevated);
   border-radius: 10px;
-  padding: 1px 8px;
+  padding: 0px 8px;
 `
 
 const ProjectCard = ({ node }) => {
@@ -96,7 +100,6 @@ const ProjectCard = ({ node }) => {
   const coverImageData = getImage(fm.cover_image)
 
   let showPost = false
-  console.log(fm.visibility)
   if (fm.visibility === "post") {
     showPost = true
   }
@@ -104,8 +107,22 @@ const ProjectCard = ({ node }) => {
   return (
     <div>
       <CardWrapper>
-        <CardImage image={coverImageData} alt={fm.title}/>
-        <CardContent>
+        <CardContentLeft>
+          <CardImage image={coverImageData} alt={fm.title}/>
+
+          <ProjectDate>{fm.start_date} – {fm.end_date}</ProjectDate>
+
+          <ProjectLinks>
+            { fm.github_link &&
+            <ExtIconLink link={fm.github_link} img={icGitHub} name={"github"}/>
+            }
+            { fm.external_link &&
+            <ExtIconLink link={fm.external_link} img={icLink} name={"external link"}/>
+            }
+          </ProjectLinks>
+        </CardContentLeft>
+
+        <CardContentRight>
           { showPost &&
             <ProjectTitle>
               <Link to={node.fields.slug}>{fm.title}</Link>
@@ -113,20 +130,7 @@ const ProjectCard = ({ node }) => {
           }
           { !showPost && <ProjectTitle>{fm.title}</ProjectTitle> }
 
-          <ProjectRole>{fm.role}</ProjectRole>
-          <b>ᆞ</b>
-          <ProjectDate>{fm.start_date} – {fm.end_date}</ProjectDate>
-
           <ProjectDescription>{fm.desc}</ProjectDescription>
-
-          <ProjectLinks>
-            { fm.github_link &&
-              <ExtIconLink link={fm.github_link} img={icGitHub} name={"github"}/>
-            }
-            { fm.external_link &&
-              <ExtIconLink link={fm.external_link} img={icLink} name={"external link"}/>
-            }
-          </ProjectLinks>
 
           <ProjectTagsContainer>
             {fm.tags_type && fm.tags_type.map( ( tag ) => (
@@ -142,7 +146,7 @@ const ProjectCard = ({ node }) => {
               <ProjectTag className="text-blue">{tag}</ProjectTag>
             ))}
           </ProjectTagsContainer>
-        </CardContent>
+        </CardContentRight>
       </CardWrapper>
     </div>
   )
