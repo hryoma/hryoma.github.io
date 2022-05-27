@@ -1,7 +1,7 @@
 import * as React from "react"
 
 import PageLayout, {Container} from "../components/layout"
-import {ExtLink} from "../components/extLink";
+import {ExtLink, IntLink} from "../components/link";
 
 const NotFoundPage = () => (
   <PageLayout title="404: Not found">
@@ -12,7 +12,7 @@ const NotFoundPage = () => (
         to <ExtLink link={"https://equipotential-grapher-9bkly.ondigitalocean.app"} title="here"/>.
       </p>
       <br/>
-      <p>Go back to the main page <ExtLink link={"https://ryoma.dev"} title={"here"}/>.</p>
+      <p>Go back to the main page <IntLink link={"https://ryoma.dev"} title={"here"}/>.</p>
     </Container>
   </PageLayout>
 )

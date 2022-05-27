@@ -1,11 +1,12 @@
 import * as React from "react"
-import { ExtLink } from "./extLink"
-import { Link } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
-import githubIcon from "../assets/icons/icon-github.png"
-import linkIcon from "../assets/icons/icon-link.png"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
+import {ExtIconLink, ExtLink} from "./link"
+
+import icGitHub from "../assets/icons/icon-github.png"
+import icLink from "../assets/icons/icon-link.png"
 
 
 const CardWrapper = styled.div`
@@ -49,25 +50,16 @@ const ProjectDescription = styled.p`
 
 const ProjectLinks = styled.div`
   margin-top: 15px;
-`
-
-const LinkIcon = styled.image`
-  height: 1.2rem;
-  width: 1.2rem;
-  transition: all ease-in-out 0.15s;
-  margin-top: 15px;
-  margin-left: 10px;
-  margin-right: 10px;
-
-  &:hover {
-    filter: drop-shadow(0 0 3px var(--c-cyan));
-    transform: scale(1.15);
-  }
+  display: flex;
+  flex-flow: row wrap;
+  gap: 15px;
 `
 
 const ProjectTagsContainer = styled.div`
+  margin-top: 15px;
   display: flex;
   flex-flow: row wrap;
+  gap: 10px;
 `
 
 const ProjectTag = styled.div`
@@ -75,8 +67,6 @@ const ProjectTag = styled.div`
   background-color: var(--c-bg-elevated);
   border-radius: 10px;
   padding: 1px 8px;
-  margin: 3px;
-  display: block;
 `
 
 const ProjectCard = ({ node }) => {
@@ -112,14 +102,10 @@ const ProjectCard = ({ node }) => {
 
           <ProjectLinks>
             { fm.github_link &&
-              <ExtLink link={fm.github_link}>
-                <LinkIcon src={githubIcon} alt={"github"}/>
-              </ExtLink>
+              <ExtIconLink link={fm.github_link} img={icGitHub} name={"github"}/>
             }
             { fm.external_link &&
-              <ExtLink link={fm.external_link}>
-                <LinkIcon src={linkIcon} alt={"external link"}/>
-              </ExtLink>
+              <ExtIconLink link={fm.external_link} img={icLink} name={"external link"}/>
             }
           </ProjectLinks>
 

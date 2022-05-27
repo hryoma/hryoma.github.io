@@ -1,3 +1,24 @@
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"),
+  url("../fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"),
+  url("../fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "SourceCodePro";
+  src: local("SourceCodePro"),
+  url("../fonts/SourceCodePro-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
 :root {
   --font-sans-serif: 'Poppins', 'Avenir', Verdana, Helvetica Neue, Arial, Courier, sans-serif;
   --font-serif: Palatino, American Typewriter, serif;
@@ -42,27 +63,6 @@
   --c-shadow-light: hsla(0, 0%, 0%, 0.05)
 }
 
-@font-face {
-  font-family: "Poppins";
-  src: local("Poppins"),
-  url("../fonts/Poppins-Regular.ttf") format("truetype");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: local("Poppins"),
-  url("../fonts/Poppins-Bold.ttf") format("truetype");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "SourceCodePro";
-  src: local("SourceCodePro"),
-       url("../fonts/SourceCodePro-Regular.ttf") format("truetype");
-  font-weight: normal;
-}
-
 /* General */
 
 html {
@@ -87,10 +87,6 @@ body {
   background-color: var(--c-bg-deeper);
   margin: 0;
   padding: 0;
-}
-
-main {
-  padding-top: 120px;
 }
 
 /* Fonts */
@@ -205,48 +201,3 @@ code {
   color: var(--c-yellow);
 }
 
-/* divs */
-
-.container, .container-wide {
-  padding: 2rem 1rem;
-  margin: 0 auto;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.container-colored {
-  background-color: var(--c-bg);
-}
-
-@media (min-width: 576px) {
-  .container, .container-wide {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container, .container-wide {
-    padding: 2rem 3rem;
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container, .container-wide {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1250px) {
-  .container-wide {
-    max-width: 1200px;
-  }
-}
-
-@media (min-width: 1500px) {
-  .container-wide {
-    padding: 2rem 5rem;
-    max-width: 1440px;
-  }
-}

@@ -2,7 +2,7 @@ import * as React from "react"
 import styled from "styled-components"
 
 import Seo from "../components/seo"
-import {ExtLink} from "../components/extLink";
+import {ExtLink, IntLink} from "../components/link";
 import Navbar from "../components/navbar"
 import Brand from "../components/brand";
 import SmIcons from "../components/sm-icons";
@@ -51,8 +51,8 @@ const AboutMe = () => {
       <ul className="about-experiences">
         <li>a web developer at{' '}
           <ExtLink className={"text-blue"}
-                   link={"https://pennclimateventures.org"}
-                   title={"Penn Climate Ventures"}/>
+                link={"https://pennclimateventures.org"}
+                title={"Penn Climate Ventures"}/>
         </li>
         <li>a co-founding CTO/full-stack developer at{' '}
           <ExtLink className={"text-green"} link={"http://cynfolia.com"} title={"Cynfolia"}/>
@@ -65,7 +65,7 @@ const AboutMe = () => {
       <p>You can check out my résumé{' '}
         <ExtLink className="text-yellow" link={resumePdf} title={"here"}/>{' '}
         and my portfolio{' '}
-        <ExtLink className="text-blue" link={"portfolio"} title={"here"}/>!
+        <IntLink className="text-blue" link={"portfolio"} title={"here"}/>!
       </p>
       <p>Feel free to reach out to me at: ryomah [at] seas.upenn.edu</p>
     </AboutMeWrapper>
@@ -163,17 +163,17 @@ const HeaderWrapper = styled.div`
     bottom: 0;
   }
 
-  & .sm-icons {
-    position: absolute;
-    margin-right: 30px;
-    right: 0;
-  }
+`
+
+const SmIconWrapper = styled.div`
+  position: absolute;
+  margin-right: 30px;
+  right: 0;
+  z-index: 100;
 
   @media screen and (max-width: 360px) {
-    & .sm-icons {
-      visibility: hidden;
-      opacity: 0;
-    }
+    visibility: hidden;
+    opacity: 0;
   }
 `
 
@@ -189,7 +189,9 @@ const IndexPage = () => {
         </TerminalContent>
         <HeaderWrapper>
           <Navbar/>
-          <SmIcons/>
+          <SmIconWrapper>
+            <SmIcons/>
+          </SmIconWrapper>
         </HeaderWrapper>
       </TerminalWindow>
     </main>

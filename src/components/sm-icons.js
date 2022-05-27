@@ -1,21 +1,23 @@
 import * as React from "react"
+import styled from "styled-components"
 
-import iconEmail from "../assets/icons/icon-email.png";
-import iconGithub from "../assets/icons/icon-github.png";
-import iconLinkedIn from "../assets/icons/icon-linkedin.png";
-import {ExtLink} from "./extLink";
+import {ExtIconLink} from "./link";
 
-import "../styles/sm-icons.css"
+import icGitHub from "../assets/icons/icon-github.png";
+import icLinkedIn from "../assets/icons/icon-linkedin.png";
+
+
+const SmIconsWrapper = styled.div`
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+`
 
 const SmIcons = () => (
-  <div className="sm-icons">
-    <ExtLink link="https://github.com/hryoma">
-      <img className="sm-icon" src={iconGithub} alt="github"/>
-    </ExtLink>
-    <ExtLink link="https://www.linkedin.com/in/ryomah/">
-      <img className="sm-icon" src={iconLinkedIn} alt="linkedin"/>
-    </ExtLink>
-  </div>
+  <SmIconsWrapper>
+    <ExtIconLink link="https://github.com/hryoma" img={icGitHub} name="github"/>
+    <ExtIconLink link="https://www.linkedin.com/in/ryomah/" img={icLinkedIn} name="linkedin"/>
+  </SmIconsWrapper>
 )
 
 export default SmIcons

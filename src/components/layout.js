@@ -5,6 +5,7 @@ import styled from "styled-components"
 import Seo from "./seo";
 import Navbar from "./navbar"
 import "../styles/base.css"
+import Footer from "./footer";
 
 
 export const Container = styled.div`
@@ -51,12 +52,18 @@ export const GridLayout = styled.div`
   padding: initial;
 `
 
+const MainWrapper = styled.main`
+  padding-top: 120px;
+  min-height: 50vh;
+`
+
 const PageLayout = ({title, children}) => {
   return (
     <>
       <Seo title={title}/>
       <Navbar/>
-      <main>{children}</main>
+      <MainWrapper>{children}</MainWrapper>
+      <Footer/>
     </>
   )
 }

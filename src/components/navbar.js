@@ -1,19 +1,51 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
 
 import Brand from "./brand";
-import "../styles/header.css"
+
+const Nav = styled.nav`
+  font-family: var(--font-monospace);
+  background-color: var(--c-bg-elevated);
+  padding: 10px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  align-items: center;
+`
+
+const NavWrapper = styled.div`
+  height: 100%;
+  margin: auto;
+  display: flex;
+`
+
+const NavMenu = styled.div`
+  height: auto;
+`
+
+const NavLink = styled(Link)`
+  color: var(--c-bright-blue);
+  transition: all ease-in-out 0.15s;
+
+  &:hover {
+    text-decoration: underline;
+    filter: drop-shadow(0 0 1px var(--c-blue));
+  }
+`
 
 const Navbar = () => (
-  <header id="navbar">
-    <div className="nav-wrapper">
+  <Nav id="navbar">
+    <NavWrapper>
       <Brand/>
-      <div className="nav-menu">
+      <NavMenu>
         <p>ls</p>
-        <Link className="nav-link" to="/portfolio/">portfolio/</Link>
-      </div>
-    </div>
-  </header>
+        <NavLink to="/portfolio/">portfolio/</NavLink>
+      </NavMenu>
+    </NavWrapper>
+  </Nav>
 )
 
 export default Navbar
