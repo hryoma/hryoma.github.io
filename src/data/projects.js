@@ -20,7 +20,7 @@ export const projects = [
     type: "ESE 215 Class Project",
     startDate: "2021-11",
     endDate: "2021-12",
-    desc: "analog plotter",
+    desc: "Analog plotter made using op-amps, controlled by potentiometers.",
     links: {
       github: [],
       website: [],
@@ -39,7 +39,7 @@ export const projects = [
     type: "ESE 350 Class Project",
     startDate: "2022-03",
     endDate: "2022-03",
-    desc: "arduino games",
+    desc: "Pong and Snake programmed in C, controlled by a joystick of wirelessly via Bluetooth.",
     links: {
       github: [],
       website: [],
@@ -58,7 +58,7 @@ export const projects = [
     type: "CIS 523 Class Project",
     startDate: "2022-03",
     endDate: "2022-03",
-    desc: "bias bounties",
+    desc: "Implementation of group fairness using a 'bias bounty'. Ensures that both fairness and accuracy improves.",
     links: {
       github: [],
       website: [],
@@ -66,9 +66,9 @@ export const projects = [
     },
     tags: {
       field: ["machine learning", "fairness", "data science"],
-      framework: ["Jupyter Notebook"],
+      framework: [],
       language: ["Python"],
-      tech: ["Pandas", "Seaborn"],
+      tech: [],
     }
   },
   {
@@ -77,7 +77,7 @@ export const projects = [
     type: "Team Project",
     startDate: "2021-04",
     endDate: "2022-04",
-    desc: "cynfolia",
+    desc: "Food waste startup, co-founded with a group of friends. Awarded 2nd place in the 2021 PCV Prize pitch competition.",
     links: {
       github: [],
       website: ["http://cynfolia.com"],
@@ -96,7 +96,7 @@ export const projects = [
     type: "CIS 523 Class Project",
     startDate: "2022-04",
     endDate: "2022-05",
-    desc: "differential privacy",
+    desc: "Exploration of ML fairness implementation using the Fairlearn package and differential privacy using TensorFlow's DP-SGD.",
     links: {
       github: [],
       website: [],
@@ -104,9 +104,9 @@ export const projects = [
     },
     tags: {
       field: ["machine learning", "fairness", "differential privacy"],
-      framework: ["Jupyter Notebook"],
+      framework: [],
       language: ["Python"],
-      tech: ["Fairlearn", "TensorFlow", "Numpy", "Pandas", "Seaborn"],
+      tech: ["Fairlearn", "TensorFlow"],
     }
   },
   {
@@ -115,7 +115,7 @@ export const projects = [
     type: "Independent Project",
     startDate: "2020-06",
     endDate: "2020-06",
-    desc: "equipotential grapher",
+    desc: "Equipotential grapher built for my high school physics teacher and class.",
     links: {
       github: [],
       website: [],
@@ -134,7 +134,7 @@ export const projects = [
     type: "Independent Project",
     startDate: "2019-06",
     endDate: "2019-06",
-    desc: "evolving race cars",
+    desc: "Race cars that 'evolve' to make its way around a track.",
     links: {
       github: [],
       website: [],
@@ -153,7 +153,7 @@ export const projects = [
     type: "Hackathon Project",
     startDate: "2021-09",
     endDate: "2021-09",
-    desc: "PennApps",
+    desc: "PennApps XXII project, where we used OpenCV to select only the 'bad' photos where a person's eyes are closed.",
     links: {
       github: [],
       website: [],
@@ -172,7 +172,7 @@ export const projects = [
     type: "CIS 240 Class Project",
     startDate: "2021-12",
     endDate: "2021-12",
-    desc: "J compiler",
+    desc: "Project written in C that compiles J, a stack-based language, into LC4 Assembly",
     links: {
       github: [],
       website: [],
@@ -210,7 +210,7 @@ export const projects = [
     type: "NETS 212 Class Project",
     startDate: "2021-11",
     endDate: "2021-12",
-    desc: "Facebook clone",
+    desc: "Mini-Facebook clone, featuring user accounts, posts, messenger using socket.io, and news feed with a PageRank-like recommendation system.",
     links: {
       github: [],
       website: [],
@@ -229,7 +229,7 @@ export const projects = [
     type: "CIS 550 Class Project",
     startDate: "2022-03",
     endDate: "2022-05",
-    desc: "MySongsQL",
+    desc: "Advanced song-querying site with complex, optimized database queries.",
     links: {
       github: [],
       website: [],
@@ -248,7 +248,7 @@ export const projects = [
     type: "ESE 350 Class Project",
     startDate: "2022-03",
     endDate: "2022-04",
-    desc: "no more temp cards",
+    desc: "Device that allows unlocking of dorm door wirelessly over Wi-Fi. Explored that CAN communication protocol and Nucleo boards.",
     links: {
       github: [],
       website: [],
@@ -267,7 +267,7 @@ export const projects = [
     type: "Team Project",
     startDate: "2018-11",
     endDate: "2019-03",
-    desc: "rocket payload separation",
+    desc: "Mechanical separation of a model rocket payload using altitude sensing.",
     links: {
       github: [],
       website: [],
@@ -309,4 +309,8 @@ export const projects = [
       return endB - endA
     }
   }
+}).map((project) => {
+  project.startDate = new Date(project.startDate).toLocaleString('en-us',{month:'short', year:'numeric'})
+  project.endDate = new Date(project.endDate).toLocaleString('en-us',{month:'short', year:'numeric'})
+  return project
 })
