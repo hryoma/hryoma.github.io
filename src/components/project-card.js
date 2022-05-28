@@ -1,9 +1,6 @@
 import * as React from "react"
 import styled from "styled-components"
 
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Link } from "gatsby"
-
 import { ExtIconLink } from "./link"
 
 import icGitHub from "../assets/icons/icon-github.png"
@@ -43,10 +40,10 @@ const CardContentLeft = styled.div`
   } 
 `
 
-const CardImage = styled(GatsbyImage)`
+const CardImage = styled.img`
   display: block;
   height: auto;
-  width: auto;
+  width: 100%;
   max-height: 180px;
   max-width: 240px;
   border-radius: 5px;
@@ -94,56 +91,45 @@ const ProjectTag = styled.small`
   padding: 0px 8px;
 `
 
-const ProjectCard = ({ node }) => {
-
-  const fm = node.frontmatter
-  const coverImageData = getImage(fm.cover_image)
-
-  let showPost = false
-  if (fm.visibility === "post") {
-    showPost = true
-  }
-
+const ProjectCard = ({project}) => {
   return (
     <div>
       <CardWrapper>
         <CardContentLeft>
-          <CardImage image={coverImageData} alt={fm.title}/>
+          <CardImage src={project.image} alt={project.title}/>
 
-          <ProjectDate>{fm.start_date} – {fm.end_date}</ProjectDate>
+          <ProjectDate>{project.startDate} – {project.endDate}</ProjectDate>
 
           <ProjectLinks>
-            { fm.github_link &&
-            <ExtIconLink link={fm.github_link} img={icGitHub} name={"github"}/>
-            }
-            { fm.external_link &&
-            <ExtIconLink link={fm.external_link} img={icLink} name={"external link"}/>
-            }
+            {project.links.github.map((link) => (
+              <ExtIconLink key={link} link={link} img={icGitHub} name={"github"}/>
+            ))}
+            {project.links.website.map((link) => (
+              <ExtIconLink key={link} link={link} img={icLink} name={"website"}/>
+            ))}
+            {project.links.misc.map((link) => (
+              <ExtIconLink key={link} link={link} img={icLink} name={"miscellaneous"}/>
+            ))}
           </ProjectLinks>
         </CardContentLeft>
 
         <CardContentRight>
-          { showPost &&
-            <ProjectTitle>
-              <Link to={node.fields.slug}>{fm.title}</Link>
-            </ProjectTitle>
-          }
-          { !showPost && <ProjectTitle>{fm.title}</ProjectTitle> }
+          <ProjectTitle>{project.title}</ProjectTitle>
 
-          <ProjectDescription>{fm.desc}</ProjectDescription>
+          <ProjectDescription>{project.desc}</ProjectDescription>
 
           <ProjectTagsContainer>
-            {fm.tags_type && fm.tags_type.map( ( tag ) => (
-              <ProjectTag className="text-magenta">{tag}</ProjectTag>
+            {project.tags.field.map((tag) => (
+              <ProjectTag key={tag} className="text-magenta">{tag}</ProjectTag>
             ))}
-            {fm.tags_framework && fm.tags_framework.map( ( tag ) => (
-              <ProjectTag className="text-yellow">{tag}</ProjectTag>
+            {project.tags.framework.map((tag) => (
+              <ProjectTag key={tag} className="text-yellow">{tag}</ProjectTag>
             ))}
-            {fm.tags_language && fm.tags_language.map( ( tag ) => (
-              <ProjectTag className="text-green">{tag}</ProjectTag>
+            {project.tags.language.map((tag) => (
+              <ProjectTag key={tag} className="text-green">{tag}</ProjectTag>
             ))}
-            {fm.tags_tech && fm.tags_tech.map( ( tag ) => (
-              <ProjectTag className="text-blue">{tag}</ProjectTag>
+            {project.tags.tech.map((tag) => (
+              <ProjectTag key={tag} className="text-blue">{tag}</ProjectTag>
             ))}
           </ProjectTagsContainer>
         </CardContentRight>
