@@ -1,17 +1,10 @@
 ---
-cover_image: ./cover.png
+cover: ./cover.png
 title: Personal Website
-role: Independent Project
-start_date: 2021-06-11
-end_date: 2021-07-22
-desc: This page is used to test the styling of this website.
-github_link: https://github.com/hryoma
-external_link: https://ryoma.dev
-tags_type: ['web dev']
-tags_framework: ['react.js', 'gatsby.js']
-tags_language: ['html', 'css', 'javascript']
-tags_tech: 
-visibility: post
+date: 2022-05-28
+summary: This page is used to test the styling of this website.
+categories: ['test category']
+tags: ['test tag']
 ---
 
 ## H2 Section Heading

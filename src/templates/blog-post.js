@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { graphql, Link } from "gatsby"
 
-import PageLayout, {Container} from "./layout"
+import PageLayout, {Container} from "../components/layout"
 
 import "../styles/markdown.css"
 
@@ -13,16 +13,16 @@ const MarkdownWrapper = styled.div`
   }
 `
 
-export default function TemplateProject({ data }) {
-  const project = data.markdownRemark
+export default function BlogPost({ data }) {
+  const post = data.markdownRemark
 
   return (
-    <PageLayout title={project.frontmatter.title}>
+    <PageLayout title={post.frontmatter.title}>
       <Container>
-        <h1>{project.frontmatter.title}</h1>
-        <MarkdownWrapper dangerouslySetInnerHTML={{ __html: project.html }} />
+        <h1>{post.frontmatter.title}</h1>
+        <MarkdownWrapper dangerouslySetInnerHTML={{ __html: post.html }} />
         <div className="back-link" style={{ marginTop: "2rem" }}>
-          <Link to="/portfolio/">Back to Portfolio</Link>
+          <Link to="/blog/">Back to All Posts</Link>
         </div>
       </Container>
     </PageLayout>
