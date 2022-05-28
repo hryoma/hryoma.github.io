@@ -1,16 +1,16 @@
-import ArduinoPongAndSnakeGame from "../assets/project-images/minesweeper.png"
-import AnalogPlotter from "../assets/project-images/minesweeper.png"
+import ArduinoPongAndSnakeGame from "../assets/project-images/arduino-pong-and-snake-game.png"
+import AnalogPlotter from "../assets/project-images/analog-potter.png"
 import BiasBounties from "../assets/project-images/minesweeper.png"
 import Cynfolia from "../assets/project-images/cynfolia.png"
-import FairnessAndDifferentialPrivacy from "../assets/project-images/minesweeper.png"
+import DifferentialPrivacyAndFairnessInML from "../assets/project-images/differential-privacy-and-fairness-in-ml.png"
 import EquipotentialGrapher from "../assets/project-images/equipotential-grapher.png"
 import EvolvingRaceCars from "../assets/project-images/evolving-race-cars.png"
-import Eyeronic from "../assets/project-images/evolving-race-cars.png"
-import JCompiler from "../assets/project-images/minesweeper.png"
+import Eyeronic from "../assets/project-images/eyeronic.png"
+import JCompiler from "../assets/project-images/j-compiler.png"
 import Minesweeper from "../assets/project-images/minesweeper.png"
-import MiniFacebookClone from "../assets/project-images/minesweeper.png"
-import MySongsQL from "../assets/project-images/minesweeper.png"
-import NoMoreTempCards from "../assets/project-images/minesweeper.png"
+import MiniFacebookClone from "../assets/project-images/mini-facebook-clone.png"
+import MySongsQL from "../assets/project-images/mysongsql.png"
+import NoMoreTempCards from "../assets/project-images/no-more-temp-cards.png"
 import RocketPayloadSeparation from "../assets/project-images/rocket-payload-separation.png"
 
 export const projects = [
@@ -53,25 +53,6 @@ export const projects = [
     }
   },
   {
-    image: BiasBounties,
-    title: "Bias Bounties",
-    type: "CIS 523 Class Project",
-    startDate: "2022-03",
-    endDate: "2022-03",
-    desc: "Implementation of group fairness using a 'bias bounty'. Ensures that both fairness and accuracy improves.",
-    links: {
-      github: [],
-      website: [],
-      misc: []
-    },
-    tags: {
-      field: ["machine learning", "fairness", "data science"],
-      framework: [],
-      language: ["Python"],
-      tech: [],
-    }
-  },
-  {
     image: Cynfolia,
     title: "Cynfolia",
     type: "Team Project",
@@ -84,29 +65,29 @@ export const projects = [
       misc: []
     },
     tags: {
-      field: ["startup", "entrepreneurship", "full-stack"],
-      framework: ["Django", "React.js"],
-      language: ["Python", "JavaScript", "HTML", "CSS"],
-      tech: ["Heroku", "git"],
+      field: ["startup", "full-stack"],
+      framework: ["Django", "React"],
+      language: ["Python", "JS"],
+      tech: ["Heroku"],
     }
   },
   {
-    image: FairnessAndDifferentialPrivacy,
-    title: "Fairness and Differential Privacy in Machine Learning",
+    image: DifferentialPrivacyAndFairnessInML,
+    title: "Differential Privacy and Fairness in Machine Learning",
     type: "CIS 523 Class Project",
     startDate: "2022-04",
     endDate: "2022-05",
-    desc: "Exploration of ML fairness implementation using the Fairlearn package and differential privacy using TensorFlow's DP-SGD.",
+    desc: "Exploration of ML implementation of differential privacy using TensorFlow's DP-SGD and fairness using the Fairlearn package.",
     links: {
       github: [],
       website: [],
       misc: []
     },
     tags: {
-      field: ["machine learning", "fairness", "differential privacy"],
+      field: ["ML", "differential privacy", "fairness"],
       framework: [],
       language: ["Python"],
-      tech: ["Fairlearn", "TensorFlow"],
+      tech: ["TensorFlow", "Fairlearn"],
     }
   },
   {
@@ -124,7 +105,7 @@ export const projects = [
     tags: {
       field: ["web dev"],
       framework: [],
-      language: ["JavaScript", "jQuery", "HTML", "CSS"],
+      language: ["JS", "jQuery"],
       tech: [],
     }
   },
@@ -160,9 +141,9 @@ export const projects = [
       misc: []
     },
     tags: {
-      field: ["machine learning", "back-end"],
+      field: ["ML", "back-end"],
       framework: ["Flask"],
-      language: ["Python", "JavaScript", "HTML", "CSS"],
+      language: ["Python", "JS"],
       tech: ["OpenCV"],
     }
   },
@@ -218,9 +199,9 @@ export const projects = [
     },
     tags: {
       field: ["web dev"],
-      framework: ["Node.js"],
-      language: ["Java", "JavaScript", "HTML", "CSS"],
-      tech: ["Amazon AWS", "socket.io", "Apache Livy"],
+      framework: ["Node"],
+      language: ["Java", "JS", "jQuery"],
+      tech: ["AWS", "socket.io", "Apache Livy"],
     }
   },
   {
@@ -237,8 +218,8 @@ export const projects = [
     },
     tags: {
       field: ["web dev", "databases"],
-      framework: ["Node.js", "React.js"],
-      language: ["MySQL", "JavaScript", "CSS", "HTML"],
+      framework: ["Node", "React"],
+      language: ["MySQL", "JS"],
       tech: ["Amazon RDS", "Heroku", "Netlify"],
     }
   },

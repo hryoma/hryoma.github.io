@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 import PageLayout, {Container, GridLayout} from "../components/layout"
 import { ExtIconLink } from "../components/link"
+import {Tag, TagsContainer} from "../components/tags";
 
 import icGitHub from "../assets/icons/icon-github.png"
 import icLink from "../assets/icons/icon-link.png"
@@ -15,7 +16,7 @@ const CardWrapper = styled.div`
   max-width: 800px;
   display: flex;
   flex-flow: row nowrap;
-  gap: 5px 15px;
+  gap: 10px 15px;
   justify-content: center;
   
   @media (max-width: 768px) {
@@ -41,17 +42,11 @@ const CardContentLeft = styled.div`
 
 const CardImage = styled.img`
   display: block;
-  height: auto;
-  width: 100%;
-  max-height: 180px;
-  max-width: 240px;
+  height: 160px;
+  width: 180px;
   border-radius: 5px;
   object-fit: cover;
   margin: 0 auto;
-`
-
-const ProjectDate = styled.small`
-  margin: 5px auto;
 `
 
 const ProjectLinks = styled.div`
@@ -73,21 +68,12 @@ const ProjectTitle = styled.h3`
   margin-top: 0;
 `
 
+const ProjectDate = styled.small`
+  margin: 5px auto;
+`
+
 const ProjectDescription = styled.p`
   margin: 10px auto;
-`
-
-const ProjectTagsContainer = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  gap: 7px 7px;
-  font-size: 0.85rem;
-`
-
-const ProjectTag = styled.small`
-  background-color: var(--c-bg-elevated);
-  border-radius: 10px;
-  padding: 0px 8px;
 `
 
 const ProjectCard = ({project}) => {
@@ -96,7 +82,7 @@ const ProjectCard = ({project}) => {
       <CardWrapper>
         <CardContentLeft>
           <CardImage src={project.image} alt={project.title}/>
-
+          {/*
           <ProjectLinks>
             {project.links.github.map((link) => (
               <ExtIconLink key={link} link={link} img={icGitHub} name={"github"}/>
@@ -108,6 +94,7 @@ const ProjectCard = ({project}) => {
               <ExtIconLink key={link} link={link} img={icLink} name={"miscellaneous"}/>
             ))}
           </ProjectLinks>
+          */}
         </CardContentLeft>
 
         <CardContentRight>
@@ -117,20 +104,20 @@ const ProjectCard = ({project}) => {
 
           <ProjectDescription>{project.desc}</ProjectDescription>
 
-          <ProjectTagsContainer>
+          <TagsContainer>
             {project.tags.field.map((tag) => (
-              <ProjectTag key={tag} className="text-magenta">{tag}</ProjectTag>
+              <Tag key={tag} className="text-magenta">{tag}</Tag>
             ))}
             {project.tags.framework.map((tag) => (
-              <ProjectTag key={tag} className="text-yellow">{tag}</ProjectTag>
+              <Tag key={tag} className="text-yellow">{tag}</Tag>
             ))}
             {project.tags.language.map((tag) => (
-              <ProjectTag key={tag} className="text-green">{tag}</ProjectTag>
+              <Tag key={tag} className="text-green">{tag}</Tag>
             ))}
             {project.tags.tech.map((tag) => (
-              <ProjectTag key={tag} className="text-blue">{tag}</ProjectTag>
+              <Tag key={tag} className="text-blue">{tag}</Tag>
             ))}
-          </ProjectTagsContainer>
+          </TagsContainer>
         </CardContentRight>
       </CardWrapper>
     </div>

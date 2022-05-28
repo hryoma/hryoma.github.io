@@ -57,7 +57,7 @@ export const GridLayout = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(${props => (props.childWidth
   ? props.childWidth : 300)}px, max-content));
-  grid-gap: 45px;
+  grid-gap: 60px 45px;
   justify-content: center;
   padding: initial;
 `
