@@ -29,18 +29,8 @@
   --c-bg-elevated: hsl(221, 21%, 29%);
   --c-cursor: hsl(219, 28%, 80%);
   --c-text: hsl(219, 28%, 80%);
-  --c-text-bold: hsl(219, 28%, 80%);
   --c-text-mute: hsl(219, 18%, 68%);
   --c-selected: hsl(193, 43%, 67%);
-
-  --c-dark-black: hsl(222, 16%, 0%);
-  --c-dark-red: hsl(354, 42%, 16%);
-  --c-dark-green: hsl(92, 28%, 25%);
-  --c-dark-yellow: hsl(40, 71%, 33%);
-  --c-dark-blue: hsl(210, 34%, 23%);
-  --c-dark-magenta: hsl(311, 20%, 23%);
-  --c-dark-cyan: hsl(193, 43%, 27%);
-  --c-dark-white: hsl(218, 27%, 52%);
 
   --c-black: hsl(222, 16%, 28%);
   --c-red: hsl(354, 42%, 56%);
@@ -50,17 +40,6 @@
   --c-magenta: hsl(311, 20%, 63%);
   --c-cyan: hsl(193, 43%, 67%);
   --c-white: hsl(218, 27%, 92%);
-
-  --c-bright-black: hsl(220, 16%, 36%);
-  --c-bright-red: hsl(354, 42%, 56%);
-  --c-bright-green: hsl(92, 28%, 65%);
-  --c-bright-yellow: hsl(40, 71%, 73%);
-  --c-bright-blue: hsl(210, 34%, 63%);
-  --c-bright-magenta: hsl(311, 20%, 63%);
-  --c-bright-cyan: hsl(179, 25%, 65%);
-  --c-bright-white: hsl(218, 27%, 94%);
-
-  --c-shadow-light: hsla(0, 0%, 0%, 0.05)
 }
 
 /* General */
@@ -137,26 +116,3 @@ code {
   background-color: var(--c-bg-elevated);
   border-radius: 5px;
 }
-
-.text-blue {
-  color: var(--c-blue);
-}
-.text-cyan {
-  color: var(--c-cyan);
-}
-.text-green {
-  color: var(--c-green);
-}
-.text-magenta {
-  color: var(--c-magenta);
-}
-.text-red {
-  color: var(--c-red);
-}
-.text-white {
-  color: var(--c-white);
-}
-.text-yellow {
-  color: var(--c-yellow);
-}
-

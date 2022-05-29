@@ -1,26 +1,26 @@
 import React from "react"
-import styled from "styled-components";
+import styled from "styled-components"
 
 
-export const IntLink = ({className, link, title, children}) => {
+const CustomLink = styled.a`
+  color: ${props => (props.color ? props.color : 'var(--c-text)')};
+`
+
+export const IntLink = ({link, title, color, children}) => {
   return (
-    <a className={className}
-       href={link}>
+    <CustomLink color={color} href={link}>
       {title}
       {children}
-    </a>
+    </CustomLink>
   )
 }
 
-export const ExtLink = ({className, link, title, children}) => {
+export const ExtLink = ({link, title, color, children}) => {
   return (
-    <a className={className}
-       rel="noreferrer noopener"
-       target="_blank"
-       href={link}>
+    <CustomLink color={color} href={link} target="_blank" rel="noreferrer noopener">
       {title}
       {children}
-    </a>
+    </CustomLink>
   )
 }
 

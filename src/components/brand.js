@@ -16,6 +16,7 @@ const BrandLink = styled(Link)`
 `
 
 const BrandText = styled.span`
+  color: ${props => (props.color ? props.color : 'var(--c-text)')};
   text-decoration: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -27,10 +28,10 @@ const BrandText = styled.span`
 
 const Brand = () => (
   <BrandLink to="/">
-    <BrandText className="text-green">ryoma</BrandText>
-    <BrandText className="text-white">:</BrandText>
-    <BrandText className="text-magenta">~</BrandText>
-    <BrandText className="text-white">$</BrandText>
+    <BrandText color="var(--c-green)">ryoma</BrandText>
+    <BrandText color="var(--c-white)">:</BrandText>
+    <BrandText color="var(--c-magenta)">~</BrandText>
+    <BrandText color="var(--c-white)">$</BrandText>
   </BrandLink>
 )
 

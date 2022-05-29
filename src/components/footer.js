@@ -24,7 +24,7 @@ const FooterText = styled.p`
 const Footer = () => (
   <FooterContainer>
     <FooterWrapper>
-      <FooterText>Ryoma Harris © {new Date().getFullYear()}</FooterText>
+      <FooterText>Ryoma © {new Date().getFullYear()}</FooterText>
       <SmIcons/>
     </FooterWrapper>
   </FooterContainer>

@@ -8,7 +8,6 @@ import Brand from "../components/brand";
 import SmIcons from "../components/sm-icons";
 
 
-
 const AboutMeWrapper = styled.div`
   margin-top: 2rem;
   opacity: 0;
@@ -47,10 +46,10 @@ const AboutMe = () => {
       <p>Hi! I'm Ryoma</p>
       <p>I study computer science at the University of Pennsylvania</p>
       <p>Currently, I'm a software engineering intern at{' '}
-        <ExtLink className={"text-cyan"} link={"https://mathworks.com"} title={"MathWorks"}/>
+        <ExtLink color="var(--c-cyan)" link="https://mathworks.com" title="MathWorks"/>
       </p>
       <p>Check out my projects{' '}
-        <IntLink className="text-magenta" link={"projects"} title={"here"}/>!
+        <IntLink color="var(--c-magenta)" link="projects" title="here"/>!
       </p>
       <p>Feel free to reach out to me at: ryomah [at] seas.upenn.edu</p>
     </AboutMeWrapper>

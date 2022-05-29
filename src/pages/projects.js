@@ -106,16 +106,16 @@ const ProjectCard = ({project}) => {
 
           <TagsContainer>
             {project.tags.field.map((tag) => (
-              <Tag key={tag} className="text-magenta">{tag}</Tag>
+              <Tag key={tag} color="var(--c-magenta)">{tag}</Tag>
             ))}
             {project.tags.framework.map((tag) => (
-              <Tag key={tag} className="text-yellow">{tag}</Tag>
+              <Tag key={tag} color="var(--c-yellow)">{tag}</Tag>
             ))}
             {project.tags.language.map((tag) => (
-              <Tag key={tag} className="text-green">{tag}</Tag>
+              <Tag key={tag} color="var(--c-green)">{tag}</Tag>
             ))}
             {project.tags.tech.map((tag) => (
-              <Tag key={tag} className="text-blue">{tag}</Tag>
+              <Tag key={tag} color="var(--c-blue)">{tag}</Tag>
             ))}
           </TagsContainer>
         </CardContentRight>

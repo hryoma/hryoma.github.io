@@ -27,7 +27,7 @@ const NavMenu = styled.div`
 `
 
 const NavLink = styled(Link)`
-  color: var(--c-bright-blue);
+  color: var(--c-blue);
   transition: all ease-in-out 0.15s;
 
   &:hover {
