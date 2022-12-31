@@ -1,37 +1,35 @@
 {
-  "name": "ryoma-portfolio",
-  "private": true,
-  "description": "Ryoma's Portfolio",
-  "version": "1.0.0",
-  "author": "Ryoma Harris",
-  "dependencies": {
-    "gatsby": "^4.20.0",
-    "gatsby-plugin-image": "^2.20.0",
-    "gatsby-plugin-manifest": "^4.20.0",
-    "gatsby-plugin-sharp": "^4.20.0",
-    "gatsby-plugin-styled-components": "^5.20.0",
-    "gatsby-remark-images": "^6.20.0",
-    "gatsby-remark-prismjs": "^6.20.0",
-    "gatsby-source-filesystem": "^4.20.0",
-    "gatsby-transformer-remark": "^5.20.0",
-    "gatsby-transformer-sharp": "^4.20.0",
-    "gh-pages": "^4.0.0",
-    "prism-themes": "^1.9.0",
-    "prismjs": "^1.28.0",
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "styled-components": "^5.3.5"
-  },
-  "keywords": [
-    "portfolio"
-  ],
-  "scripts": {
-    "deploy": "gatsby build && cp CNAME public/ && gh-pages -d public -b main"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hryoma/hryoma.github.io"
-  }
+	"name": "hryoma.github.io",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"test": "playwright test",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"test:unit": "vitest",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"devDependencies": {
+		"@playwright/test": "^1.28.1",
+		"@sveltejs/adapter-auto": "^1.0.0",
+		"@sveltejs/kit": "^1.0.0",
+		"@typescript-eslint/eslint-plugin": "^5.45.0",
+		"@typescript-eslint/parser": "^5.45.0",
+		"eslint": "^8.28.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-svelte3": "^4.0.0",
+		"prettier": "^2.8.0",
+		"prettier-plugin-svelte": "^2.8.1",
+		"svelte": "^3.54.0",
+		"svelte-check": "^2.9.2",
+		"tslib": "^2.4.1",
+		"typescript": "^4.9.3",
+		"vite": "^4.0.0",
+		"vitest": "^0.25.3"
+	},
+	"type": "module"
 }
