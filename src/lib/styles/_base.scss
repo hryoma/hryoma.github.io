@@ -1,0 +1,20 @@
+// base
+
+body {
+	color: var(--c-text);
+	font-family: var(--font-sans-serif);
+	font-weight: normal;
+	word-wrap: break-word;
+	background-color: var(--c-bg-deeper);
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: var(--c-blue);
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
