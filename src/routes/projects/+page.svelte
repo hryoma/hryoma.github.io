@@ -10,6 +10,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Ryoma | Projects</title> 
+</svelte:head>
+
 <Container>
 	<h1>Projects</h1>
 
@@ -90,7 +94,7 @@
 		}
 
 		h3 {
-			line-height: 0;
+			margin: 0;
 		}
 
 		.date {

@@ -4,6 +4,10 @@
 	import Socials from '$lib/components/Socials.svelte';
 </script>
 
+<svelte:head>
+	<title>Ryoma | Home</title> 
+</svelte:head>
+
 <div class="terminal-wrapper">
 	<div class="terminal-window">
 		<div class="terminal-header">
@@ -34,6 +38,7 @@
 	}
 
 	.terminal-window {
+		font-family: var(--font-monospace);
 		max-width: 800px;
 		border: 3px solid var(--c-bg-elevated);
 		border-radius: 15px;
@@ -51,7 +56,6 @@
 	}
 
 	.terminal-content {
-		font-family: var(--font-monospace);
 		height: calc(100vh - 240px);
 		max-height: 300px;
 		padding: 30px;
@@ -133,3 +137,4 @@
 
 	}
 </style>
+

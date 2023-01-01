@@ -1,1 +1,16 @@
-// fonts
+/* fonts.scss */
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"),
+  url("/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "SourceCodePro";
+  src: local("SourceCodePro"),
+  url("/fonts/SourceCodePro-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
