@@ -12,6 +12,7 @@
 
 <style lang="scss">
 	nav {
+		font-family: var(--font-monospace);
 		background-color: var(--c-bg-elevated);
 		display: flex;
 		align-items: center;
@@ -22,7 +23,6 @@
 	}
 	
 	ul {
-		font-family: var(--font-monospace);
 		margin-left: 15px;
 		display: flex;
 		gap: 15px;
