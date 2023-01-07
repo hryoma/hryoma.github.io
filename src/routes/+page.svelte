@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Brand from '$lib/components/Brand.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import Socials from '$lib/components/Socials.svelte';

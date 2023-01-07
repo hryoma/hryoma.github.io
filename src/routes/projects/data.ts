@@ -1,6 +1,8 @@
+import type { Project } from '$lib/types/project';
+
 const imageDir = "project-images/";
 
-export const projects = [
+export const projects: Project[] = [
 	{
 		image: `${imageDir}analog-potter.png`,
 		title: "Analog Plotter",
@@ -15,7 +17,7 @@ export const projects = [
 		},
 		tags: {
 			field: ["electronics"],
-		framework: [],
+			framework: [],
 			language: ["C++"],
 			tech: ["Arduino"],
 		}
@@ -72,7 +74,7 @@ export const projects = [
 		},
 		tags: {
 			field: ["ML", "differential privacy", "fairness"],
-		framework: [],
+			framework: [],
 			language: ["Python"],
 			tech: ["TensorFlow", "Fairlearn"],
 		}
@@ -91,7 +93,7 @@ export const projects = [
 		},
 		tags: {
 			field: ["web dev"],
-		framework: [],
+			framework: [],
 			language: ["JS", "jQuery"],
 			tech: [],
 		}
@@ -110,7 +112,7 @@ export const projects = [
 		},
 		tags: {
 			field: ["game dev"],
-		framework: [],
+			framework: [],
 			language: ["Python"],
 			tech: ["Pygame"],
 		}
@@ -148,7 +150,7 @@ export const projects = [
 		},
 		tags: {
 			field: ["computer systems"],
-		framework: [],
+			framework: [],
 			language: ["C", "J", "LC4 Assembly"],
 			tech: [],
 		}
@@ -167,7 +169,7 @@ export const projects = [
 		},
 		tags: {
 			field: ["game dev"],
-		framework: [],
+			framework: [],
 			language: ["Java"],
 			tech: ["JSwing"],
 		}
@@ -224,7 +226,7 @@ export const projects = [
 		},
 		tags: {
 			field: ["embedded systems", "electronics"],
-		framework: [],
+			framework: [],
 			language: ["C++"],
 			tech: ["Nucleo MCU", "Node MCU"],
 		}
@@ -243,7 +245,7 @@ export const projects = [
 		},
 		tags: {
 			field: ["electronics", "rocketry"],
-		framework: [],
+			framework: [],
 			language: ["C", "C++"],
 			tech: ["Arduino", "3D printing", "RockSim"],
 		}
@@ -251,10 +253,10 @@ export const projects = [
 ].sort((a, b) => {
 	let currA = "Current" === a.endDate;
 	let currB = "Current" === b.endDate;
-	let startA = new Date(a.startDate);
-	let startB = new Date(b.startDate);
-	let endA = new Date(a.endDate);
-	let endB = new Date(b.endDate);
+	let startA: Date = new Date(a.startDate);
+	let startB: Date = new Date(b.startDate);
+	let endA: Date = new Date(a.endDate);
+	let endB: Date = new Date(b.endDate);
 
 	if (currA && currB) {
 		if (startA - startB === 0) {
@@ -262,9 +264,7 @@ export const projects = [
 		} else {
 			return startB - startA;
 		}
-	} else if (currA) {
-		return 1;
-	} else if (currB) {
+	} else if (currA || currB) {
 		return -1;
 	} else {
 		if (endA - endB === 0) {
@@ -279,9 +279,9 @@ export const projects = [
 	}
 }).map((project) => {
 	project.startDate = new Date(project.startDate)
-		.toLocaleString('en-us',{month:'short', year:'numeric'});
+		.toLocaleString('en-us', { month:'short', year:'numeric' });
 	project.endDate = new Date(project.endDate)
-		.toLocaleString('en-us',{month:'short', year:'numeric'});
+		.toLocaleString('en-us', { month:'short', year:'numeric' });
 	return project;
 });
 
