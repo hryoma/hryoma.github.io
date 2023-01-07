@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Brand from '$lib/components/Brand.svelte';
 </script>
 

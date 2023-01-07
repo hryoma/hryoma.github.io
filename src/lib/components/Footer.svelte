@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Socials from '$lib/components/Socials.svelte';
 </script>
 

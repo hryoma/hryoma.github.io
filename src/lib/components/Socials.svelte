@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	const iconDir = 'icons/';
 	const socials = [
 		{
@@ -40,3 +40,4 @@
 		}
 	}
 </style>
+
