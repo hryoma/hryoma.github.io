@@ -1,4 +1,4 @@
-# hryoma
+# hryoma.github.io
 
 ## Deployment to GitHub Pages
 

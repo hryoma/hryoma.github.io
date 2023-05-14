@@ -252,30 +252,30 @@ export const projects: Project[] = [
 	}
 ]
 	.sort((a, b) => {
-		let currA = 'Current' === a.endDate;
-		let currB = 'Current' === b.endDate;
-		let startA: Date = new Date(a.startDate);
-		let startB: Date = new Date(b.startDate);
-		let endA: Date = new Date(a.endDate);
-		let endB: Date = new Date(b.endDate);
+		const currA = 'Current' === a.endDate;
+		const currB = 'Current' === b.endDate;
+		const startA: Date = new Date(a.startDate);
+		const startB: Date = new Date(b.startDate);
+		const endA: Date = new Date(a.endDate);
+		const endB: Date = new Date(b.endDate);
 
 		if (currA && currB) {
-			if (startA - startB === 0) {
+			if (startA.getTime() - startB.getTime() === 0) {
 				return a.title.localeCompare(b.title);
 			} else {
-				return startB - startA;
+				return startB.getTime() - startA.getTime();
 			}
 		} else if (currA || currB) {
 			return -1;
 		} else {
-			if (endA - endB === 0) {
-				if (startA - startB === 0) {
+			if (endA.getTime() - endB.getTime() === 0) {
+				if (startA.getTime() - startB.getTime() === 0) {
 					return a.title.localeCompare(b.title);
 				} else {
-					return startB - startA;
+					return startB.getTime() - startA.getTime();
 				}
 			} else {
-				return endB - endA;
+				return endB.getTime() - endA.getTime();
 			}
 		}
 	})

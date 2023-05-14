@@ -7,8 +7,6 @@
 		width: 100%;
 		padding: 1rem;
 		margin: 0 auto;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 
 		@media (min-width: 640px) {
