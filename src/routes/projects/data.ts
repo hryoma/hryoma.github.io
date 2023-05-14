@@ -175,25 +175,6 @@ export const projects: Project[] = [
 		}
 	},
 	{
-		image: `${imageDir}mini-facebook-clone.png`,
-		title: 'Mini-Facebook Clone',
-		type: 'NETS 212 Class Project',
-		startDate: '2021-11',
-		endDate: '2021-12',
-		desc: 'Mini-Facebook clone, featuring user accounts, posts, messenger using socket.io, and news feed with a PageRank-like recommendation system.',
-		links: {
-			github: [],
-			website: [],
-			misc: []
-		},
-		tags: {
-			field: ['web dev'],
-			framework: ['Node'],
-			language: ['Java', 'JS', 'jQuery'],
-			tech: ['AWS', 'socket.io', 'Apache Livy']
-		}
-	},
-	{
 		image: `${imageDir}mysongsql.png`,
 		title: 'MySongsQL',
 		type: 'CIS 550 Class Project',
@@ -229,6 +210,82 @@ export const projects: Project[] = [
 			framework: [],
 			language: ['C++'],
 			tech: ['Nucleo MCU', 'Node MCU']
+		}
+	},
+	{
+		image: `${imageDir}mini-facebook-clone.png`,
+		title: 'PennBook',
+		type: 'NETS 212 Class Project',
+		startDate: '2021-11',
+		endDate: '2021-12',
+		desc: 'A mini Facebook clone, featuring a multimedia social media platform with a home feed and wall, messenger using socket.io, and news feed with an adsorption-based recommendation system.',
+		links: {
+			github: [],
+			website: [],
+			misc: []
+		},
+		tags: {
+			field: ['web dev'],
+			framework: ['Node'],
+			language: ['Java', 'JS', 'jQuery'],
+			tech: ['AWS', 'socket.io', 'Apache Livy']
+		}
+	},
+	{
+		image: `${imageDir}gears.png`,
+		title: 'PennCloud',
+		type: 'CIS 5050 Class Project',
+		startDate: '2023-03',
+		endDate: '2023-05',
+		desc: 'A Google-like suite + infrastructure, featuring a distributed system of fault tolerant key-value stores, load balancer, multithreaded frontend servers, SMTP server, and storage service.',
+		links: {
+			github: [],
+			website: [],
+			misc: []
+		},
+		tags: {
+			field: ['distributed systems'],
+			framework: [],
+			language: ['C', 'C++', 'HTML', 'JS', 'CSS'],
+			tech: ['gRPC']
+		}
+	},
+	{
+		image: `${imageDir}circuit-board.png`,
+		title: 'PennOS',
+		type: 'CIS 3800 Class Project',
+		startDate: '2022-10',
+		endDate: '2022-12',
+		desc: 'A user-level UNIX-like OS with a virtual kernel, FAT file system, and shell.',
+		links: {
+			github: [],
+			website: [],
+			misc: []
+		},
+		tags: {
+			field: ['operating system'],
+			framework: [],
+			language: ['C'],
+			tech: []
+		}
+	},
+	{
+		image: `${imageDir}fmcw-radars.png`,
+		title: 'Real-Time Monitoring of FMCW Radar Interference',
+		type: 'CIS 7000 Class Project',
+		startDate: '2023-03',
+		endDate: '2023-05',
+		desc: 'An investigation into detection, identification, and mitigation strategies of FMCW radar interference',
+		links: {
+			github: [],
+			website: [],
+			misc: []
+		},
+		tags: {
+			field: ['wireless signals', 'research'],
+			framework: [],
+			language: ['Python'],
+			tech: ['mmWave Studio', 'xWR1843', 'DCA1000']
 		}
 	},
 	{
@@ -280,13 +337,23 @@ export const projects: Project[] = [
 		}
 	})
 	.map((project) => {
-		project.startDate = new Date(project.startDate).toLocaleString('en-us', {
+		const [startYear, startMonth] = project.startDate.split('-');
+		const [endYear, endMonth] = project.endDate.split('-');
+
+		project.startDate = new Date(
+			Date.UTC(parseInt(startYear), parseInt(startMonth))
+		).toLocaleString('en-us', {
 			month: 'short',
 			year: 'numeric'
 		});
-		project.endDate = new Date(project.endDate).toLocaleString('en-us', {
-			month: 'short',
-			year: 'numeric'
-		});
+
+		project.endDate = new Date(Date.UTC(parseInt(endYear), parseInt(endMonth))).toLocaleString(
+			'en-us',
+			{
+				month: 'short',
+				year: 'numeric'
+			}
+		);
+
 		return project;
 	});
