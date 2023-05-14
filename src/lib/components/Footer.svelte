@@ -4,8 +4,8 @@
 
 <footer>
 	Ryoma © {new Date().getFullYear()}
-	<br/>
-	<br/>
+	<br />
+	<br />
 	<Socials />
 </footer>
 
@@ -18,4 +18,3 @@
 		padding: 60px;
 	}
 </style>
-

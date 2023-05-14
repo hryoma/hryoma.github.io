@@ -2,14 +2,14 @@
 	const iconDir = 'icons/';
 	const socials = [
 		{
-			link: "https://github.com/hryoma",
-			name: "github",
-			icon: `${iconDir}github.png`,
+			link: 'https://github.com/hryoma',
+			name: 'github',
+			icon: `${iconDir}github.png`
 		},
 		{
-			link: "https://www.linkedin.com/in/ryomah",
-			name: "linkedin",
-			icon: `${iconDir}linkedin.png`,
+			link: 'https://www.linkedin.com/in/ryomah',
+			name: 'linkedin',
+			icon: `${iconDir}linkedin.png`
 		}
 	];
 </script>
@@ -40,4 +40,3 @@
 		}
 	}
 </style>
-

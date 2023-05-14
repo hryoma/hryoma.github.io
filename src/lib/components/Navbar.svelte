@@ -21,7 +21,7 @@
 		position: sticky;
 		z-index: 100;
 	}
-	
+
 	ul {
 		margin-left: 15px;
 		display: flex;
@@ -38,4 +38,3 @@
 		}
 	}
 </style>
-

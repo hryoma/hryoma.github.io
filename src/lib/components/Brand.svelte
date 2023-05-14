@@ -28,4 +28,3 @@
 		color: var(--c-magenta);
 	}
 </style>
-

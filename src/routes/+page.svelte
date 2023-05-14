@@ -5,14 +5,12 @@
 </script>
 
 <svelte:head>
-	<title>Ryoma | Home</title> 
+	<title>Ryoma | Home</title>
 </svelte:head>
 
 <div class="terminal-wrapper">
 	<div class="terminal-window">
-		<div class="terminal-header">
-			&gt;_
-		</div>
+		<div class="terminal-header">&gt;_</div>
 		<div class="terminal-content">
 			<p><Brand />echo ${'{'}<span class="typewriter">About_Me</span>{'}'}</p>
 			<ul>
@@ -23,7 +21,7 @@
 			</ul>
 		</div>
 		<div class="terminal-footer">
-		<Navbar />
+			<Navbar />
 			<div class="socials-wrapper">
 				<Socials />
 			</div>
@@ -47,7 +45,7 @@
 
 	.terminal-header {
 		font-size: 2rem;
-		font-family: Menlo, Monaco, "Lucida Console", "Courier New", Courier, monospace;
+		font-family: Menlo, Monaco, 'Lucida Console', 'Courier New', Courier, monospace;
 		font-weight: bold;
 		text-align: center;
 		background: var(--c-bg-elevated);
@@ -67,7 +65,7 @@
 			line-height: 2rem;
 
 			&:before {
-				content: ">";
+				content: '>';
 				margin-right: 0.5em;
 			}
 		}
@@ -78,10 +76,10 @@
 			transform: translateY(1rem);
 			animation: fadeInUp 2s ease 2s forwards;
 			@keyframes fadeInUp {
-			to {
-				opacity: 1;
-				transform: translateY(0);
-			}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
 			}
 		}
 	}
@@ -91,7 +89,8 @@
 		position: relative;
 		width: max-content;
 		--typewriter-speed: 1s;
-		&::before, &::after {
+		&::before,
+		&::after {
 			content: '';
 			@include position-zero;
 		}
@@ -102,21 +101,21 @@
 		}
 		/* blinking cursor */
 		&::after {
-			width: .125em;
+			width: 0.125em;
 			background: transparent;
 			animation: typewriter var(--typewriter-speed) steps(12) 0.5s forwards,
 				typeblink 750ms steps(6) 3;
 		}
 
 		@keyframes typewriter {
-		to {
-			left: 100%
-		}
+			to {
+				left: 100%;
+			}
 		}
 		@keyframes typeblink {
-		to {
-			background-color: var(--c-cursor);
-		}
+			to {
+				background-color: var(--c-cursor);
+			}
 		}
 	}
 
@@ -134,7 +133,5 @@
 				opacity: 0;
 			}
 		}
-
 	}
 </style>
-

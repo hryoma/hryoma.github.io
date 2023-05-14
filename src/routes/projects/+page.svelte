@@ -1,17 +1,17 @@
 <script lang="ts">
 	import Container from '$lib/components/Container.svelte';
 	import { projects } from './data';
-	
+
 	const colors = {
-		"field": "magenta",
-		"framework": "yellow",
-		"language": "green",
-		"tech": "blue",
-	}
+		field: 'magenta',
+		framework: 'yellow',
+		language: 'green',
+		tech: 'blue'
+	};
 </script>
 
 <svelte:head>
-	<title>Ryoma | Projects</title> 
+	<title>Ryoma | Projects</title>
 </svelte:head>
 
 <Container>
@@ -21,7 +21,7 @@
 		{#each projects as project}
 			<div class="card">
 				<div class="card-left">
-					<img src={project.image} alt={project.title}/>
+					<img src={project.image} alt={project.title} />
 				</div>
 				<div class="card-right">
 					<h3>{project.title}</h3>
@@ -113,4 +113,3 @@
 		}
 	}
 </style>
-
