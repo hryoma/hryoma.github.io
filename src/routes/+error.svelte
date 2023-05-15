@@ -1,13 +1,20 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+
+	const {
+		status,
+		error: { message }
+	} = $page;
+	const title = `${status}: ${message}`;
 </script>
 
 <svelte:head>
-	<title>Ryoma | 404 Page Not Found</title>
+	<title>Ryoma | {title}</title>
 </svelte:head>
 
 <div>
-	<h1>404</h1>
-	<p>Page Not Found</p>
+	<h1>{status}</h1>
+	<p>{message}</p>
 	<a href="/">Return to Home</a>
 </div>
 
