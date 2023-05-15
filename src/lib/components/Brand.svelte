@@ -1,5 +1,9 @@
+<script lang="ts">
+	import { base } from '$app/paths';
+</script>
+
 <span class="brand-wrapper">
-	<a href="/" class="brand">
+	<a href={`${base}/`} class="brand">
 		<span class="green">ryoma</span>:<span class="purple">~</span>$
 	</a>
 </span>

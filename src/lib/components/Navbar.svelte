@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import Brand from '$lib/components/Brand.svelte';
 </script>
 
@@ -6,7 +7,7 @@
 	<Brand />
 	<span>cd</span>
 	<ul>
-		<li><a href="/projects">projects/</a></li>
+		<li><a href={`${base}/projects`}>projects/</a></li>
 	</ul>
 </nav>
 
