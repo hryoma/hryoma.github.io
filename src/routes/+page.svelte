@@ -17,7 +17,6 @@
 			<ul>
 				<li>Hi! I'm Ryoma</li>
 				<li>I'm studying computer science at the University of Pennsylvania</li>
-				<li>Check out my projects <a href={`${base}/projects`}>here</a></li>
 				<li>Feel free to reach out to me at: ryomah [at] seas [dot] upenn [dot] edu</li>
 			</ul>
 		</div>

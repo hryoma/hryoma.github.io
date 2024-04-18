@@ -7,7 +7,7 @@
 	<Brand />
 	<span>cd</span>
 	<ul>
-		<li><a href={`${base}/projects`}>projects/</a></li>
+		<li><a href={`${base}/`}>home/</a></li>
 	</ul>
 </nav>
 
